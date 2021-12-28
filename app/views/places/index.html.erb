@@ -1,0 +1,7 @@
+<% @places.each do |place| %>
+ <h2><%= place.city_name %>, <%= place.place_name %></h2>
+<p><%= place.address %></p>
+<p><%= place.description %></p>
+<p>$<%= place.price_by_night %></p>
+<%= link_to "See more", place_path(place), class:"see-more" %>
+<% end %>

@@ -5,5 +5,9 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    # @wishlists = Place.wishlists
+  end
+
+  def create
   end
 end
