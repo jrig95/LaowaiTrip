@@ -6,6 +6,11 @@
     class: "form-control",
     placeholder: "Find a hotel"
   %>
+  <%# <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a hotel"
+  %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
 
@@ -16,7 +21,7 @@
         <h2 class="car_name"><%= place.city_name %> <%= place.place_name %></h2>
       </div>
       <div class="px-6 pt-2 pb-2 mb-2 border-div">
-        <%= link_to "View car", place_path(place),  class: "view_car" %>
+        <%= link_to "View hotel", place_path(place),  class: "view_car" %>
       </div>
     </div>
   <% end %>
