@@ -1,7 +1,23 @@
-<% @places.each do |place| %>
- <h2><%= place.city_name %>, <%= place.place_name %></h2>
-<p><%= place.address %></p>
-<p><%= place.description %></p>
-<p>$<%= place.price_by_night %></p>
-<%= link_to "See more", place_path(place), class:"see-more" %>
+
+
+<%= form_tag places_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a hotel"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+
+<div class="car_container grid grid-cols-3 items-center gap-5">
+  <% @places.each do |place| %>
+    <div class="car-card">
+      <div>
+        <h2 class="car_name"><%= place.city_name %> <%= place.place_name %></h2>
+      </div>
+      <div class="px-6 pt-2 pb-2 mb-2 border-div">
+        <%= link_to "View car", place_path(place),  class: "view_car" %>
+      </div>
+    </div>
+  <% end %>
+</div>
