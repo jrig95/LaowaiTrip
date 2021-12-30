@@ -65,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form'
 gem 'tailwindcss-rails'
 gem 'simple_form-tailwind'
+
+# to not share cloudinary key
+gem 'dotenv-rails', groups: [:development, :test]
