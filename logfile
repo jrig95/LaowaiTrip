@@ -1,0 +1,22 @@
+2022-01-02 10:37:56.610 CST [5665] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-02 10:37:56.613 CST [5665] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-02 10:37:56.613 CST [5665] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-02 10:37:56.614 CST [5665] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-02 10:37:56.627 CST [5666] LOG:  database system was interrupted; last known up at 2021-12-28 21:41:33 CST
+2022-01-02 10:37:56.787 CST [5666] LOG:  database system was not properly shut down; automatic recovery in progress
+2022-01-02 10:37:56.791 CST [5666] LOG:  redo starts at 0/176F010
+2022-01-02 10:37:56.791 CST [5666] LOG:  invalid record length at 0/176F0F8: wanted 24, got 0
+2022-01-02 10:37:56.791 CST [5666] LOG:  redo done at 0/176F0C0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2022-01-02 10:37:56.803 CST [5665] LOG:  database system is ready to accept connections
+2022-01-02 10:41:56.810 CST [5665] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-02 10:41:56.811 CST [5665] LOG:  performing immediate shutdown because data directory lock file is invalid
+2022-01-02 10:41:56.811 CST [5665] LOG:  received immediate shutdown request
+2022-01-02 10:41:56.811 CST [5665] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-02 10:41:56.812 CST [5671] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2022-01-02 10:41:56.815 CST [5665] LOG:  database system is shut down
+2022-01-02 10:59:06.612 CST [6049] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-02 10:59:06.615 CST [6049] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-02 10:59:06.615 CST [6049] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-02 10:59:06.616 CST [6049] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-02 10:59:06.621 CST [6050] LOG:  database system was shut down at 2022-01-02 10:58:41 CST
+2022-01-02 10:59:06.625 CST [6049] LOG:  database system is ready to accept connections
