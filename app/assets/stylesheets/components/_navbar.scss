@@ -1,12 +1,18 @@
-.navbar-lewagon {
+.navbar-laowai {
   justify-content: space-between;
-  background: white;
+  background: rgba(196, 196, 196, 0.6);
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-laowai .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-laowai .navbar-brand img {
   width: 40px;
+}
+
+.navbar h1 {
+  font-family: Permanent Marker;
+  font-weight: 700;
+  font-size: 25px;
 }
