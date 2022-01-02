@@ -18,4 +18,10 @@ class PlacesController < ApplicationController
 
   def create
   end
+
+  private
+
+  def place_params
+    params.require(:place).permit(:name, :photo)
+  end
 end
