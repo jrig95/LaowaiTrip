@@ -32,10 +32,8 @@ gem 'devise'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
-gem 'simple_form'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -65,3 +63,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'simple_form'
 gem 'tailwindcss-rails'
 gem 'simple_form-tailwind'
+
+# to not share cloudinary key
+gem 'dotenv-rails', groups: [:development, :test]
+
+# cloudinary
+gem 'cloudinary', '~> 1.16.0'
