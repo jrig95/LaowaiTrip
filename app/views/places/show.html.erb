@@ -8,4 +8,10 @@
 <p>max guests: <%= @place.max_guest %>,</p>
 <p>number of bathrooms: <%= @place.number_bathrooms %>,</p>
 <p><%= @place.view %></p>
+
+    <div class="row justify-content-center", id="map"
+      data-marker="<%= @marker.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
 <%= link_to 'Favorite', place_wishlists_path(@place), method: :post %>

@@ -32,3 +32,10 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+import { initMapbox } from '../plugins/init_mapbox';
+import { dropDown } from './dropdown';
+document.addEventListener('turbolinks:load', () => {
+  dropDown();
+  initMapbox();
+})

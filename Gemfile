@@ -73,5 +73,8 @@ gem 'simple_form-tailwind'
 # to not share cloudinary key
 gem 'dotenv-rails', groups: [:development, :test]
 
-# cloudinary
+# cloudinary for image hosting
 gem 'cloudinary', '~> 1.16.0'
+
+#geocoder for maps
+gem 'geocoder'
