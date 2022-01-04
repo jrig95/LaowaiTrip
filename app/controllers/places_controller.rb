@@ -13,6 +13,11 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find(params[:id])
+    @marker =
+      {
+        lat: @place.latitude,
+        lng: @place.longitude
+      }
     # @wishlists = Place.wishlists
   end
 
@@ -22,6 +27,6 @@ class PlacesController < ApplicationController
   private
 
   def place_params
-    params.require(:place).permit(:name, :photo)
+    params.require(:place).permit(:name, :address, photos: [])
   end
 end
