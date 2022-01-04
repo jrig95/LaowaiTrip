@@ -1,6 +1,10 @@
 
+
+
 <h2><%= @place.place_name %>, <%= @place.place_name %></h2>
-<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill, class: "object-cover h-80 w-full card-image" %>
+<% @place.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <p>description:<%= @place.description %></p>
 <p>amenities:<%= @place.amenities %></p>
 <p>price by night: $<%= @place.price_by_night %></p>
