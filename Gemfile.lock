@@ -130,10 +130,8 @@ GEM
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.8)
-
     nokogiri (1.12.5-arm64-darwin)
       racc (~> 1.4)
-
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
@@ -245,6 +243,9 @@ GEM
     unf_ext (0.0.8)
     warden (1.2.9)
       rack (>= 2.0.9)
+    watir (6.19.1)
+      regexp_parser (>= 1.2, < 3)
+      selenium-webdriver (>= 3.142.7)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -266,9 +267,7 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-
   arm64-darwin-20
-
   x86_64-darwin-20
   x86_64-linux
 
@@ -290,6 +289,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.1)
   redis (~> 4.0)
+  rest-client
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
@@ -299,6 +299,7 @@ DEPENDENCIES
   tailwindcss-rails
   turbolinks (~> 5)
   tzinfo-data
+  watir (~> 6.19, >= 6.19.1)
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)

@@ -78,3 +78,8 @@ gem 'cloudinary', '~> 1.16.0'
 
 #geocoder for maps
 gem 'geocoder'
+
+# for scraping
+gem 'watir', '~> 6.19', '>= 6.19.1'
+
+gem 'rest-client'
