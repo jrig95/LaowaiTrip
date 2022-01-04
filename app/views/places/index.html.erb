@@ -1,9 +1,11 @@
-
-<div class="w-full lg:flex-col">
+<div class=" w-full lg:max-w-full">
 <% @places.each do |place| %>
-  <div class="hotel_card lg:h-48 border-r mb-2 border-8 border-yellow-500 shadow-md border-solid  lg:border-r-4 lg:border-l-2 lg:border-t-2 lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-row leading-normal">
+
+  <div class="lg:h-48 border-r mb-2 border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r leading-normal" >
+  <div class=" md:flex">
+
   <div title="Woman holding a mug">
-  <%= image_tag "hotel_entrance.jpg", alt: "Le Wagon", class: "h-48 lg:h-48 lg:w-48 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" %>
+    <%= image_tag "hotel_entrance.jpg", alt: "Le Wagon", class: "h-full lg:w-48 xs:w-80 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" ,style:"height: 100% !important" %>
   </div>
   <div class="flex justify-between w-100">
     <div class="p-4">
@@ -23,6 +25,18 @@
     </div>
     </div>
     </div>
+  </div>
   <% end %>
   </div>
-</div>
+
+
+<%# <div class="flex flex-col" >
+<div>1</div>
+<div>2</div>
+</div> %>
+
+<%# <div class="flex flex-col">
+  <div>01</div>
+  <div>02</div>
+  <div>03</div>
+</div> %>

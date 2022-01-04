@@ -7,12 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Cleaning database..."
 Place.destroy_all
-
 puts "Creating places..."
-
 require "open-uri"
-
 first_user = User.first
+
 first_place_image = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/327419823.jpg?k=482a587ee9cd4aca228e48c7e6d38173fafd2981e93dd9367532b2a93d0c8f6b&o=&hp=1')
 first_place = Place.new(user: first_user, city_name: "Shanghai", place_name: "Shanghai W on the Bund", description: "A beautiful hotel on the north bund ", price_by_night: 159, view: "bund view", available: true,max_guest: 4,number_bathrooms: 4, address:"66 Lvshun Road, Hongkou, Shanghai, China", number_rooms: 4, amenities: "washer and dryer, towel rack, hot tub")
 first_place.photo.attach(io: first_place_image, filename: 'shanghai_w.jpeg', content_type: 'image/jpeg')
@@ -27,5 +25,6 @@ third_place_image = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max102
 third_place = Place.new(user: first_user, city_name: "Shanghai", place_name: "JW Marriot", description: "A beautiful hotel in People's Square", price_by_night: 160, view: "bund view", available: true,max_guest: 6, number_bathrooms: 2, address:"399 Nanjing West Road, Shanghai, China",number_rooms: 4, amenities: "washer and dryer, towel rack, hot tub")
 third_place.photo.attach(io: third_place_image, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
 third_place.save!
+
 
 puts "Done"
