@@ -108,9 +108,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -281,7 +278,6 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass
   geocoder
-  jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   pry-byebug
