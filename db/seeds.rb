@@ -34,4 +34,10 @@ require_relative 'scrapers'
 p Scrape
 scrape = Scrape.new
 
-p scrape.scrape_url
+p scrape.scrape_trip_url
+
+prices = scrape.scrape_trip_url
+
+prices.each do |price|
+  puts price.children.children.text
+end
