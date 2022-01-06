@@ -16,9 +16,15 @@ first_place = Place.new(user: first_user, city_name: "Shanghai", place_name: "Sh
 first_place.photos.attach(io: first_place_image, filename: 'shanghai_w.jpeg', content_type: 'image/jpeg')
 first_place.save!
 
-second_place_image = URI.open('https://images.getaroom-cdn.com/image/upload/s--Y55dO4d_--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1620722391/abfa10e5894f5f001b68f34605e400fc5c666a6d?atc=e7cd1cfa')
+second_place_image_one = URI.open('https://images.getaroom-cdn.com/image/upload/s--Y55dO4d_--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1620722391/abfa10e5894f5f001b68f34605e400fc5c666a6d?atc=e7cd1cfa')
+second_place_image_two = URI.open('https://cdn.kiwicollection.com/media/property/PR008349/xl/008349-01-exterior-shaghai-skyline.jpg?cb=1435069697')
 second_place = Place.new(user: first_user, city_name: "Shanghai", place_name: "The Peace Hotel", description: "A beautiful hotel next to the bund", price_by_night: 160, view: "bund view", available: true,max_guest: 6, number_bathrooms: 2, address:"20 East Nanjing Road, Shanghai, China",number_rooms: 4, amenities: "washer and dryer, towel rack, hot tub")
+<<<<<<< HEAD
 second_place.photos.attach(io: second_place_image, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
+=======
+second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
+second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
+>>>>>>> 64163bf57ba1cf56d45acd87aaf678bf1b79c149
 second_place.save!
 
 third_place_image = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/95126675.jpg?k=6c74e8b295ad1527ebefea7b56f96a2ac3e6ec49344d089a462b3abca62131e8&o=&hp=1')
