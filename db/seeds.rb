@@ -39,5 +39,6 @@ p scrape.scrape_trip_url
 prices = scrape.scrape_trip_url
 
 prices.each do |price|
+  # puts price
   puts price.children.children.text
 end
