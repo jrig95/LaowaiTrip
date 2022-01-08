@@ -4,8 +4,10 @@
   align-items: center;
   justify-content: space-between;
   height: 65px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3)
+
+  padding: 1px 50px;
+  color: rgba(0,0,0,0.3);
+
 }
 
 .footer-links {
@@ -15,19 +17,22 @@
 
 .footer-links a {
   color: black;
-  opacity: 0.15;
+
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: 500ms linear;
 }
 
 .footer-links a:hover {
-  opacity: 1;
+  transform: scale(1.1);
+
 }
 
 .footer_brand_text {
 font-family: 'Permanent Marker';
 font-size: 28px;
-line-height: 40px;
+line-height: 50px;
 color: black;
+padding: 10px 10px;
 }

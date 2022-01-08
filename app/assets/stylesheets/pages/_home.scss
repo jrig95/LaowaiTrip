@@ -56,3 +56,63 @@ box-shadow: #F4BA13;
   position: sticky;
   top: 0;
 }
+
+// Profile Page
+// .background-column {
+// background: linear-gradient(0deg, #F7C32A, #F7C32A), #F4BA13;
+// background-size: cover;
+// }
+.background-svg{
+background-color: #F4BA13;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23F4C719' fill-opacity='0.77' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/%3E%3C/svg%3E");
+background-size:cover;
+background-position: center;
+padding: 150px 0;
+}
+.container h1 {
+  font-size: 32px;
+  font-weight:bold;
+}
+.card-main {
+  height: 500px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-main img {
+  height: 100%;
+  width: 340px;
+  object-fit:cover;
+}
+
+.list-group-item{
+  height: 120px;
+  background: white;
+  border: 6px solid #F4BA13;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  width: 560px;
+  left: 8px;
+  margin-bottom: 8px;
+}
+
+.list-group-item:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),0 24px 46px var(--box-shadow-color);
+}
+
+.list-group-item h2 {
+  font-size: 28px;
+  font-weight:medium;
+}
+.svg-heart {
+ height: 50px;
+ padding-right: 8px;
+}
+.svg-globe {
+ height: 50px;
+ padding-right: 8px;
+}
