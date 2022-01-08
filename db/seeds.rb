@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# puts "Cleaning database..."
-# Place.destroy_all
-# puts "Creating places..."
-# require "open-uri"
-# first_user = User.first
+puts "Cleaning database..."
+Place.destroy_all
+puts "Creating places..."
+require "open-uri"
+first_user = User.first
 
 
 # first_place_image = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max1280x900/327419823.jpg?k=482a587ee9cd4aca228e48c7e6d38173fafd2981e93dd9367532b2a93d0c8f6b&o=&hp=1')
@@ -40,9 +40,6 @@ second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace
 second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
 
 
-second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
-second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
-
 
 second_place.save!
 
@@ -53,18 +50,18 @@ third_place.save!
 
 
 
-# puts "Done"
+puts "Done"
 
-require_relative 'scrapers'
+# require_relative 'scrapers'
 
-p Scrape
-scrape = Scrape.new
+# p Scrape
+# scrape = Scrape.new
 
-p scrape.scrape_trip_url
+# p scrape.scrape_trip_url
 
-prices = scrape.scrape_trip_url
+# prices = scrape.scrape_trip_url
 
-prices.each do |price|
-  # puts price
-  puts price.children.children.text
-end
+# prices.each do |price|
+#   # puts price
+#   puts price.children.children.text
+# end
