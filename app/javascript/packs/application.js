@@ -39,3 +39,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
+
+// import { initMapbox } from '../plugins/init_mapbox';
+// import { dropDown } from './dropdown';
+// document.addEventListener('turbolinks:load', () => {
+//   dropDown();
+//   initMapbox();
+// })
