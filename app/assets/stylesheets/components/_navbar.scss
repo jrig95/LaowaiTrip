@@ -1,18 +1,42 @@
-.navbar-laowai {
+.navbar-lewagon {
   justify-content: space-between;
   background: rgba(196, 196, 196, 0.6);
 }
 
-.navbar-laowai .navbar-collapse {
+.navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-laowai .navbar-brand img {
+.navbar-lewagon .navbar-brand img {
   width: 40px;
 }
 
-.navbar h1 {
-  font-family: Permanent Marker;
-  font-weight: 700;
-  font-size: 25px;
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgba(246, 186, 10, 1);
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.brand_text {
+font-family: 'Permanent Marker';
+font-size: 28px;
+line-height: 40px;
+color: black;
+justify-content: left;
+}
+
+.logo {
+  text-align: left;
+  margin-right: 800px;
+  align-items: flex-end;
+  display: flex;
+  position: relative;
+  padding-right: 50px;
 }

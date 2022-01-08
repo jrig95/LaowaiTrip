@@ -23,6 +23,11 @@ second_place = Place.new(user: first_user, city_name: "Shanghai", place_name: "T
 second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
 second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
 
+
+second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
+second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
+
+
 second_place.save!
 
 third_place_image = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/95126675.jpg?k=6c74e8b295ad1527ebefea7b56f96a2ac3e6ec49344d089a462b3abca62131e8&o=&hp=1')
