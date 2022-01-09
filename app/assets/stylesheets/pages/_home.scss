@@ -102,21 +102,33 @@ width: 100%;
 // color:red;
 // }
 
+
 // .index page {
 // .hotel_card
 // box-shadow: #F4BA13;
 // }
 
-.view_btn {
-  text-decoration: none;
-  color:white;
-  font-weight: bolder;
-  background: #F4BA13;
-  border-radius: 4px;
-  margin-right: 1rem;
-  font-weight: normal;
-  padding: 8px 24px;
+// index page
+.card {
+border: solid 4px #F4BA13;
+box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+}
 
+
+.button{
+  background-color: #F4BA13;
+  border-radius: 2%;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, .2);
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -128,26 +140,28 @@ width: 100%;
   top: 0;
 }
 
-
 .link{
   text-decoration: none;
 }
 
+
+
 .card-text{
   color: pink;
 }
-
 
 // Profile Page
 // .background-column {
 // background: linear-gradient(0deg, #F7C32A, #F7C32A), #F4BA13;
 // background-size: cover;
 // }
-// .background-svg{
-// background-color: #F4BA13;
-// background: url(no-dimensions-1x1-ratio.svg);
-// background-size: cover;
-// }
+.background-svg{
+background-color: #F4BA13;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23F4C719' fill-opacity='0.77' points='120 120 60 120 90 90 120 60 120 0 120 0 60 60 0 0 0 60 30 90 60 120 120 120 '/%3E%3C/svg%3E");
+background-size:cover;
+background-position: center;
+padding: 150px 0;
+}
 .container h1 {
   font-size: 32px;
   font-weight:bold;
@@ -196,7 +210,30 @@ width: 100%;
  padding-right: 8px;
 }
 
+// home page css
+.h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+
+}
+
+.btn-gradient {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  transition: background 0.3s ease;
+  border: 1px solid #0F60C4;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(#147EFF, #0F67DA);
+  color: white;
+}
+
 .svg-plane {
  height: 60px;
  padding-right: 8px;
 }
+
