@@ -32,20 +32,25 @@
 // }
 
 // index page
-.hotel_card {
-box-shadow: #F4BA13;
+.card {
+border: solid 4px #F4BA13;
+box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
-.view_btn {
-  text-decoration: none;
-  color:white;
-  font-weight: bolder;
-  background: #F4BA13;
-  border-radius: 4px;
-  margin-right: 1rem;
-  font-weight: normal;
-  padding: 8px 24px;
+.button{
+  background-color: #F4BA13;
+  border-radius: 2%;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, .2);
+}
 
+.button a {
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -60,6 +65,8 @@ box-shadow: #F4BA13;
 .link{
   text-decoration: none;
 }
+
+
 
 .card-text{
   color: pink;
@@ -151,3 +158,5 @@ padding: 150px 0;
  height: 60px;
  padding-right: 8px;
 }
+
+// footer
