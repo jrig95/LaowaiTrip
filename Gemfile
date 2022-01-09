@@ -79,3 +79,6 @@ gem 'geocoder'
 gem 'watir', '~> 6.19', '>= 6.19.1'
 
 gem 'rest-client'
+
+# adding simple form
+gem 'simple_form'
