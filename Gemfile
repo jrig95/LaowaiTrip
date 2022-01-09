@@ -82,3 +82,6 @@ gem 'rest-client'
 
 # adding simple form
 gem 'simple_form'
+
+# adding httpparty
+gem 'httparty'
