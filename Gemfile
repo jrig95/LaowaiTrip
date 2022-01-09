@@ -16,7 +16,7 @@ gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+# gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -64,10 +64,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# tailwindcss
-gem 'simple_form'
-gem 'tailwindcss-rails'
-gem 'simple_form-tailwind'
 
 
 # to not share cloudinary key
@@ -78,3 +74,8 @@ gem 'cloudinary', '~> 1.16.0'
 
 #geocoder for maps
 gem 'geocoder'
+
+# for scraping
+gem 'watir', '~> 6.19', '>= 6.19.1'
+
+gem 'rest-client'
