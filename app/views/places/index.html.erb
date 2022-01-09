@@ -1,33 +1,27 @@
-<div class=" w-full lg:max-w-full">
+<div class="container">
 <% @places.each do |place| %>
+<div class="card mb-3 d-flex d-flex-col" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <%= image_tag "hotel_entrance.jpg", alt: "Le Wagon"%>
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <p class="card-text"><%= place.city_name %></p>
+        <h5 class="card-title"><%= place.place_name %></h5>
+        <p class="card-text"><%= place.description %>.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="col-md-2 link">
+    <%= link_to "View car", place_path(place),  class: "view_car" %>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
 
-  <div class="lg:h-48 border-r mb-2 border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r leading-normal" >
-  <div class=" md:flex">
 
-  <div title="Woman holding a mug">
-    <%= image_tag "hotel_entrance.jpg", alt: "Le Wagon", class: "h-full lg:w-48 xs:w-80 bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" ,style:"height: 100% !important" %>
-  </div>
-  <div class="flex justify-between w-100">
-    <div class="p-4">
-      <p class="text-sm text-grey-dark flex items-center">
-        <svg class="text-grey w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        <%= place.city_name %>
-      </p>
-      <div class="text-black font-bold text-xl mb-2"><%= place.place_name %></div>
-      <p class="text-grey-darker text-base"><%= place.description %></p>
-    </div>
-    <div class="flex items-center pr-3 text-inline">
-    <a href="#"class="">
-      <%= link_to "View", place_path(place),  class: "view_btn" %>
-      </a>
-    </div>
-    </div>
-    </div>
-  </div>
-  <% end %>
-  </div>
 
 
 <%# <div class="flex flex-col" >
