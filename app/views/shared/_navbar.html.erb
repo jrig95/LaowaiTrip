@@ -2,34 +2,43 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%# <div class="container-fluid"> %>
     <a class="navbar-brand" href="#">
-</a>
-<div class="logo">
-      <span class="brand_text leading-loose font-semibold italic mt-0">
-      <span class="container left-justify">
-      <logo>LaowaiTrip</logo>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-iconn"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+      </a>
+        <div class="logo">
+          <span class="brand_text leading-loose font-semibold italic mt-0">
+            <span class="container left-justify">
+              <logo>LaowaiTrip</logo>
+                </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-iconn"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          <%# <a class="nav-link" href="#">Home</a> %>
         </li>
-        <li class="nav-item">
-        <a class="btn btn-flat" href="#">Log in</a>
-        </li>
-        <li class="nav-item dropdown">
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Log in
+            </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <%= link_to "Profile", profile_path, class: "dropdown-item" %>
+                <a class="dropdown-item" href="#!"></a>
+                <%= link_to "Places", places_path, class: "dropdown-item" %>
+                  <a class="dropdown-item" href="#!"></a>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  <a class="dropdown-item" href="#!"></a>
+                  <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                  <a class="dropdown-item" href="#!"></a>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
       <%# <% if user_signed_in? %>
     <%# <li class="nav-item active"> %>
@@ -51,3 +60,13 @@
     <%# </ul> %>
   <%# </div> %>
 <%# </div> %>
+
+
+
+<%# <li class="nav-item">
+          <a class="btn btn-flat" href="#">Log in</a>
+            </li>
+              <li class="nav-item dropdown">
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a> %>
