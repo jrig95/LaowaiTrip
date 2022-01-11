@@ -14,15 +14,12 @@
 
   </head>
 
-  <body style="margin: 0">
+  <body class="min-vh-100">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
-    <main style="min-height: 90vh;">
-    <main >
-
-    <%= yield %>
-    </main>
+      <main>
+        <%= yield %>
+      </main>
     <%= render 'shared/footer' %>
   </body>
 </html>
