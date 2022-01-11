@@ -11,7 +11,14 @@
 <p>number of rooms: <%= @place.number_rooms %>,</p>
 <p>max guests: <%= @place.max_guest %>,</p>
 <p>number of bathrooms: <%= @place.number_bathrooms %>,</p>
+<div>
 <p><%= @place.view %></p>
+<div>
+  <%= link_to "Link to #{@place.thirdparty} for booking", @place.link, method: :post %>
+
+  <%= link_to image_tag("#{@place.thirdparty}.jpg",  height: '48', width: '48'), "#{@place.link}", alt: "Le Wagon", class:"img-fluid rounded-start"%>
+
+</div>
 
     <div class="row justify-content-center", id="map"
       data-marker="<%= @marker.to_json %>"
