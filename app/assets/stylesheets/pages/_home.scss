@@ -286,3 +286,39 @@ form{
  height: 60px;
  padding-right: 8px;
 }
+// sign up page
+
+.china-background-image {
+  background-image: url(https://images.unsplash.com/photo-1618082445556-8b5e4fee89dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg1fHxjaGluYSUyMHRpYmV0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+  min-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.sign-up-card{
+  width: 500px;
+  height: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border: 8px solid #F4BA13;
+  margin-left: 350px;
+ justify-content: center;
+}
+
+.sign-up-card h2 {
+font-size: 32px;
+font-weight:medium;
+margin-bottom: 50px;
+}
+
+.sign-up-button {
+  background-color: #F4BA13;
+  border-radius: 2%;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
