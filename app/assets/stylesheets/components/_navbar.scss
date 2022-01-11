@@ -1,6 +1,7 @@
 .navbar-lewagon {
 
   background: rgba(196, 196, 196, 0.6);
+  box-shadow: 0 4px 2px -2px grey;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -30,6 +31,20 @@ font-size: 28px;
 line-height: 40px;
 color: black;
 justify-content: left;
+}
+
+.navbar-nav{
+  padding-right: 30px;
+}
+
+.nav-info{
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.dropdown{
+  margin-left: 5px;
 }
 
 // .logo {
