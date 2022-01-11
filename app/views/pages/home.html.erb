@@ -5,56 +5,55 @@
           <div class="home-header">
         <h1>EXPERTS IN EXPAT</h1>
       <p>TRAVEL</p>
- </div>
- <div class="card-product">
- <div class="input-info">
+    <link rel="stylesheet" href="style.scss">
+    </div>
 
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Check out
-      </button>
-
-        <div class="check-in">
-            </div>
-              </div>
-              <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Check in
+    <div>
+    <div class="card-product">
+      <div class="input-info">
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle"    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Check-out
             </button>
-          <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Check out</a>
+
+              <div class="check-in">
+                </div>
+                  </div>
+                  <div class="btn-group">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Check-in
+              </button>
+
+            <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Check-out</a>
+        </div>
+
       </div>
       </div>
-      </div>
+
       <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text" id="btnGroupAddon">Select Location</div>
-            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
-            </div>
-                </div>
-                </div>
-                <div class="search-button">
-                 <a class="btn btn-flat" href="#">Search</a>
+      <%= form_tag places_path, method: :get do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a hotel"
+        %>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Guests
+            </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="#!">Adults</a>
+                  <a class="dropdown-item" href="#!">Infants</a>
+                  <a class="dropdown-item" href="#!">Children</a>
+                  <a class="dropdown-item" href="#!">Pets</a>
                     </div>
                       </div>
-
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Check out</a>
-            </div>
+                        </div>
+                      </div>
+                    <div>
+                  <%= submit_tag "Search", class: "btn btn-primary" %>
+                <% end %>
               </div>
-              <div class="btn-group">
-            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Check in
-            </button>
-          <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Check out</a>
-      </div>
-      </div>
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <div class="input-group-text" id="btnGroupAddon">Select Location</div>
-          </div>
-            <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
-              </div>
-                </div>
-
