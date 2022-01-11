@@ -4,8 +4,8 @@
 
 .background-image {
   background-image: url(https://images.unsplash.com/photo-1589895009255-67c7cb06de4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80);
-  min-width: 100%;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   background-size: cover;
 }
 
@@ -26,7 +26,6 @@
   padding-top: 180px;
   padding-bottom: 20px;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
-  margin-left: 50px;
 }
 
 .home-header p {
@@ -114,6 +113,7 @@
 
 
 // end of home page
+
 .index__container {
   width: 100%;
   height: 100vh;
@@ -183,8 +183,6 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 .link{
   text-decoration: none;
 }
-
-
 
 .card-text{
   color: pink;
@@ -281,4 +279,27 @@ form{
 .svg-plane {
  height: 60px;
  padding-right: 8px;
+}
+
+// CSS - Show page
+h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 44px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  font-size: 25px;
+  padding-left: 44px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+img {
+  margin-left: 40px;
 }
