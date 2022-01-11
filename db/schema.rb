@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2022_01_10_064707) do
     t.string "address"
     t.bigint "user_id", null: false
     t.string "image"
+
     t.float "latitude"
     t.float "longitude"
     t.string "link"
