@@ -4,12 +4,15 @@
 </div>
 
  <div class="card-main">
-  <%= simple_form_for(@user) do |f| %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+  <% if @user.photo.attached? %>
+    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+  <% else %>
+    <%= simple_form_for(@user) do |f| %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+    <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
   <% end %>
-
-  <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
   <div class="card-contents">
   <span>
    <h3> <%= @user.name %>
