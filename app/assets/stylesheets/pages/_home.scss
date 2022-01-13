@@ -158,7 +158,8 @@ width: 100%;
 // index page
 .card {
 border: solid 4px #F4BA13;
-box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+// box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+box-shadow: 6px 4px 6px #ccc;
 }
 
 
@@ -167,6 +168,7 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   border-radius: 2%;
   width: 130px;
   height: 40px;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +178,12 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 .button a {
   text-decoration: none;
   color: white;
+}
+
+.hotel-image{
+  width: 100%;
+  object-fit: fill;
+  height: 300px;
 }
 
 
@@ -191,9 +199,21 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   text-decoration: none;
 }
 
-.card-text{
-  color: pink;
+.card-title{
+  font-size: 30px;
+  font-weight: bold;
 }
+
+.city-name{
+color: black;
+
+}
+
+.card-description{
+ color: black;
+
+}
+
 
 
 .background-svg{
@@ -290,27 +310,26 @@ form{
 
 
 // CSS - Show page
-h2 {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-size: 40px;
-  padding-top: 20px;
-  padding-left: 44px;
-  margin-bottom: 20px;
-}
 
-p {
-  font-family: 'Montserrat';
-  font-weight: bolder;
-  font-size: 25px;
-  padding-left: 44px;
-  padding-top: 10px;
-  margin-top: 20px;
-}
+// h2 {
+//   font-family: 'Montserrat';
+//   font-style: normal;
+//   font-size: 40px;
+//   padding-top: 20px;
+//   padding-left: 44px;
+//   margin-bottom: 20px;
+// }
 
-img {
-  margin-left: 40px;
-}
+// p {
+//   font-family: 'Montserrat';
+//   font-weight: bolder;
+//   font-size: 25px;
+//   padding-left: 44px;
+//   padding-top: 10px;
+//   margin-top: 20px;
+// }
+
+
 
 // sign up page
 
@@ -322,21 +341,21 @@ img {
 }
 
 .sign-up-card{
-  width: 500px;
-  height: 400px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
   border: 8px solid #F4BA13;
   margin-left: 350px;
  justify-content: center;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .sign-up-card h2{
 font-size: 32px;
 font-weight:medium;
-margin-bottom: 50px;
 }
 
 .sign-up-button{
@@ -345,6 +364,14 @@ margin-bottom: 50px;
   width: 130px;
   height: 40px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction:column;
   justify-content: center;
   align-items: center;
 }
