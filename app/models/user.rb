@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true
   has_many :places
   has_many :wishlists, dependent: :destroy
+  has_one_attached :photo
 end
