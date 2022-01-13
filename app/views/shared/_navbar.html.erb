@@ -20,21 +20,26 @@
             <%= link_to "Home", root_path, class: "nav-link" %>
           <%# <a class="nav-link" href="#">Home</a> %>
         </li>
+
+        <%# dropdown %>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle"
           type="button" id="dropdownMenu1" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Log in
+          Action
             </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <%= link_to "Profile", profile_path, class: "dropdown-item" %>
-                <a class="dropdown-item" href="#!"></a>
-                <%= link_to "Places", places_path, class: "dropdown-item" %>
-                  <a class="dropdown-item" href="#!"></a>
+                <% if user_signed_in? %>
+                  <%= link_to "Profile", profile_path, class: "dropdown-item" %>
+                    <a class="dropdown-item" href="#!"></a>
+                  <%= link_to "Places", places_path, class: "dropdown-item" %>
+                      <a class="dropdown-item" href="#!"></a>
                   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                  <a class="dropdown-item" href="#!"></a>
+                      <a class="dropdown-item" href="#!"></a>
+                <% else %>
                   <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-                  <a class="dropdown-item" href="#!"></a>
+                      <a class="dropdown-item" href="#!"></a>
+                <% end %>
                     </div>
                     </div>
                   </li>
