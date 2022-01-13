@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     resources :wishlists, only: [:new, :create, :destroy]
   end
   get 'profile', to: 'pages#profile'
+  get 'users/:id/new', to: 'pages#profile', as: :edit_user
 end
