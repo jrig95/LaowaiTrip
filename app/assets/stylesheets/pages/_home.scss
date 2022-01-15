@@ -119,6 +119,81 @@
   align-items: center;
 }
 
+// carousel css
+.carousel form{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+section .search-info{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+      height: 84vh
+}
+
+div#carouselExampleFade{
+    position:relative;
+}
+
+div.form-group {
+    position:absolute;
+    z-index:9999999;
+    top: 268px; /* change to whatever you want */ /* change to whatever you want */
+    right:auto; /* change to whatever you want */
+    bottom:auto; /* change to whatever you want */
+    display: block;
+    height:25%;
+//     width: 100%;
+//     font-size: 0.875rem;
+//     line-height: 1.5;
+//     color: #55595c;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     height: calc(3rem + 2px) !important;
+    // border-radius:0;
+}
+// .search-sec{
+//     padding: 2rem;
+// }
+// .search-slt{
+//     display: block;
+//     width: 100%;
+//     font-size: 0.875rem;
+//     line-height: 1.5;
+//     color: #55595c;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     height: calc(3rem + 2px) !important;
+//     border-radius:0;
+// }
+// .wrn-btn{
+//     width: 100%;
+//     font-size: 16px;
+//     font-weight: 400;
+//     text-transform: capitalize;
+//     height: calc(3rem + 2px) !important;
+//     border-radius:0;
+// }
+// @media (min-width: 992px){
+//     .search-sec{
+//         position: relative;
+//         top: -114px;
+//         background: rgba(26, 70, 104, 0.51);
+//     }
+// }
+
+// @media (max-width: 992px){
+//     .search-sec{
+//         background: #1A4668;
+//     }
+// }
+
 // end of home page
 
 .index__container {
@@ -414,4 +489,3 @@ color:black;
 
 
 }
-
