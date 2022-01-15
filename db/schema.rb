@@ -62,9 +62,6 @@ ActiveRecord::Schema.define(version: 2022_01_13_022431) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "address"
     t.bigint "user_id", null: false
-    t.string "image"
-    t.date "date_from"
-    t.date "date_to"
     t.float "latitude"
     t.float "longitude"
     t.string "link"
