@@ -2,9 +2,22 @@
 <div>
  <h1>MY PROFILE</h1>
 </div>
- <div class="card-main">
 
-  <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
+ <div class="card-main">
+  <% if @user.photo.attached? %>
+    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+    <h2>change profile picture</h2>
+        <%= simple_form_for(@user) do |f| %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+  <% else %>
+    <%= simple_form_for(@user) do |f| %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+    <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
+  <% end %>
   <div class="card-contents">
   <span>
    <h3> <%= @user.name %>
@@ -22,7 +35,7 @@
   <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
   </svg><h2>Wishlist</h2>
        <% @user.wishlists.each do |w| %>
-       <%= w.place.place_name %>
+       <%= link_to w.place.place_name, place_path(w.place) %>
       <% end %>
   </div>
  </div>

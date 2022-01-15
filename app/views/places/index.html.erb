@@ -3,17 +3,16 @@
 
 <div class="container mt-3">
 <% @places.each do |place| %>
-<div class="card mb-3 d-flex d-flex-col">
+<div class="card mb-3 d-flex d-flex-col h-100">
   <div class="row g-0">
-    <div class="col-md-4">
-      <%= image_tag place.photos.first, alt: "Le Wagon", class:"img-fluid rounded-start"%>
+    <div class="col-md-4 image">
+      <%= image_tag place.photos.first, alt: "Le Wagon", class:"hotel-image rounded-start"%>
     </div>
-    <div class="col-md-6 d-flex align-items-center justify-content-center">
-      <div class="card-body">
-        <p class="card-text"><%= place.city_name %></p>
+    <div class="col-md-6 d-flex align-items-center col-md-offset-3">
+      <div class="card-info">
+        <p class="city-name text-muted"><%= place.city_name %></p>
         <h5 class="card-title"><%= place.place_name %></h5>
-        <p class="card-text"><%= place.description %>.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <p class="card-description"><%= place.description.truncate(68, separator: '', omission: '...') %>.</p>
         <%= link_to image_tag("#{place.thirdparty}.jpg",  height: '48', width: '48'), place_path(place), alt: "Le Wagon", class:"img-fluid rounded-start"%>
 
       </div>

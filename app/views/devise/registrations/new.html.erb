@@ -29,6 +29,7 @@
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 hint_html:{class:"hint-email"},
                 input_html: { autocomplete: "new-password"}%>
+
                   </div>
    <div class="input-label"><%= f.input :password_confirmation,
                 required: true,
@@ -36,11 +37,13 @@
                 label:false,
                 input_html: { autocomplete: "new-password" } %>
                   </div>
+
     <%= f.button :submit, "Sign up",class:"sign-up-button" %>
 
  <% end %>
 </div>
  <div class="login-button"><%= render "devise/shared/links" %><a href="#"><span class="button-a"></span></a></div>
+
 </div>
 </div>
 </div>
