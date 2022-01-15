@@ -338,6 +338,8 @@ form{
   min-width: 100%;
   min-height: 100vh;
   background-size: cover;
+//   display: flex;
+//   align-items: center;
 }
 
 .sign-up-card{
@@ -345,24 +347,29 @@ form{
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
   border: 8px solid #F4BA13;
-  margin-left: 350px;
- justify-content: center;
- display: block;
+
+  justify-content: center;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 30%;
+  min-height: 85vh;
+  padding-left: 90px;
 }
 
 .sign-up-card h2{
 font-size: 32px;
-font-weight:medium;
+font-weight:bold;
+justify-content: center;
+padding-top: 25px;
+color:black;
 }
 
 .sign-up-button{
   background-color: #F4BA13;
   border-radius: 2%;
   width: 130px;
-  height: 40px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,4 +381,37 @@ font-weight:medium;
   flex-direction:column;
   justify-content: center;
   align-items: center;
+
+
 }
+.input-label{
+  font-size: 14px !important;
+  min-width: 60%;
+}
+
+
+.hint-email{
+  font-size: 10px !important;
+  justify-content: left;
+}
+.login-button{
+ background-color: #F4BA13;
+  border-radius: 2%;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  margin-left: 45px;
+
+
+}
+.button-a {
+   color: #FFF;
+  text-decoration: none;
+
+
+}
+
