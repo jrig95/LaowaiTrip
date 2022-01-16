@@ -61,7 +61,6 @@
 }
 
 .dropdown-toggle {
-  background-color: #F4BA13;
   color: black;
   border-color: #F4BA13;
   border-radius: 4px
@@ -83,14 +82,15 @@
   color: rgba(246, 186, 10, 1);
 }
 
-.btn-primary {
+.btn-yellow {
   background-color: rgba(246, 186, 10, 1);
-  color: black;
+  color: white;
   border-color: rgba(246, 186, 10, 1);
   margin-left: 850px;
   margin-top: 50px;
   padding-left: 30px;
   padding-right: 30px;
+  font-family: 'Montserrat';
 
 }
 
@@ -103,9 +103,8 @@
 }
 
 .form-control {
-  margin-right: 30px;
   min-width: 50px;
-  margin-left: 20px;
+  font-family: 'Montserrat';
 }
 
 .btn-secondary.dropdown-toggle:focus {
@@ -142,7 +141,7 @@ div#carouselExampleFade{
 div.form-group {
     position:absolute;
     z-index:9999999;
-    top: 268px; /* change to whatever you want */ /* change to whatever you want */
+    top: 235px; /* change to whatever you want */ /* change to whatever you want */
     right:auto; /* change to whatever you want */
     bottom:auto; /* change to whatever you want */
     display: block;

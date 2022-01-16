@@ -1,32 +1,36 @@
-<style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Permanent+Marker&display=swap');</style>
-
-
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Permanent+Marker&display=swap');
+</style>
 <section>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <%= image_tag "junyao.jpg", alt: "First slide", class: "d-block w-100" %>
-            </div>
-            <div class="carousel-item">
-                <%= image_tag "kaiyu.jpg", alt: "First slide", class: "d-block w-100" %>
-            </div>
-            <div class="carousel-item">
-                <%= image_tag "dien-nhi-nguyen.jpg", alt: "First slide", class: "d-block w-100" %>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "kaiyu.jpg", alt: "First slide", class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+         <%= image_tag "junyao.jpg", alt: "First slide", class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "dien-nhi-nguyen.jpg", alt: "First slide", class: "d-block w-100" %>
+      </div>
+    </div>
+    <%# <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
-
-     <div class="container form-group d-flex justify-content-center align-items-center min-vw-100">
-        <div class="search_info">
-    <div class="card-product">
-      <div class="input-info">
+        </a> %>
+    <div class="container form-group d-flex justify-content-center align-items-center min-vw-100">
+      <div class="search_info">
+        <div class="home-header">
+          <h1>EXPERTS IN</h1>
+          <p> EXPAT TRAVEL</p>
+          <link rel="stylesheet" href="style.scss">
+        </div>
+        <div class="card-product">
+          <%# <div class="input-info">
         <div class="btn-group">
           <button type="button" class="btn btn-danger dropdown-toggle"    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Check-out
@@ -38,49 +42,42 @@
                   <div class="btn-group">
                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Check-in
-              </button>
-
-            <div class="dropdown-menu">
+              </button> %>
+          <%# <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Check-out</a>
         </div>
 
       </div>
-      </div>
-
-      <div class="input-group">
-      <%= form_tag places_path, method: :get do %>
-      <%= text_field_tag :query,
+      </div>  %>
+          <div class="input-group">
+            <%= form_tag places_path, method: :get do %>
+              <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Find a hotel"
         %>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle"
+              <%# <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle"
           type="button" id="dropdownMenu1" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          Guests
-            </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <a class="dropdown-item" href="#!">Adults</a>
+                  Guests
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <a class="dropdown-item" href="#!">Adults</a>
                   <a class="dropdown-item" href="#!">Infants</a>
                   <a class="dropdown-item" href="#!">Children</a>
                   <a class="dropdown-item" href="#!">Pets</a>
-                    </div>
-                      </div>
-                        </div>
-                      </div>
-                    <div class="search">
-                  <%= submit_tag "Search", class: "btn btn-primary" %>
-              </div>
-                <% end %>
-              </div>
+                </div>
+              </div> %>
+          <div class="search">
+            <%= submit_tag "Search", class: "btn btn-yellow" %>
+          </div>
 
-              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-
-
-    </div>
-</section>
-<section class="search-sec">
-
+  </div>
+</div>
 </section>

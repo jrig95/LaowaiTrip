@@ -35,7 +35,13 @@ justify-content: left;
 
 .navbar-nav{
   padding-right: 30px;
+  align-items: center;
 }
+
+.dropdown-menu {
+  min-width: 50px;
+}
+
 
 .nav-info{
   display: flex;
@@ -45,6 +51,11 @@ justify-content: left;
 
 .dropdown{
   margin-left: 5px;
+}
+
+.home-btn {
+  font-size: 18px;
+  font-family: 'Permanent Marker';
 }
 
 // .logo {
