@@ -1,36 +1,45 @@
-
-
-<div class="place-name">
+<div class="show-container">
+<div class="show-info">
   <h2><%= @place.place_name %>, <%= @place.place_name %></h2>
-    <div class="place-info">
-      <p><%= @place.description %></p>
-      <div class="place-photos">
+  <div class="place-info-headline">
+    <p><%= @place.description %></p>
+  </div>
+  <div class="show-room-container">
+    <p><%= @place.max_guest %> guests • <%= @place.number_rooms %> bedrooms • <%= @place.   number_bathrooms %> bathrooms </p>
+  </div>
+  <div class="btn btn-flat"> <i class="far fa-heart"></i> <%= link_to 'Wishlist', place_wishlists_path(@place),method: :post %></div>
+</div>
+
+  <div class="show-photos">
     <% @place.photos.each do |photo|  %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill, class: "object-cover h-80 w-full card-image" %>
-        <% end %>
+      <%= cl_image_tag photo.key, height: 263, width: 350, crop: :fill, class: "object-cover h-80 w-full card-image" %>
+    <% end %>
+  </div>
+
+  <div class="hotel-info-container">
+    <div class="d-flex">
+      <div class="info-container">
         <div class="hotel-info">
+          <p><i class="fas fa-shower"></i> Amenities: <%= @place.amenities %></p>
+          <p><i class="fas fa-yen-sign"></i> Price per night: ¥ <%= @place.price_by_night %></p>
+          <p><i class="fas fa-map-marker-alt"></i> Address: <%= @place.address %></p>
+          <p> <i class="fas fa-hotel"></i> Special features: <%= @place.view %></p>
+        </div>
+        <div class="stay-book-hotel">
+        <%= link_to image_tag("#{@place.thirdparty}.jpg",  height: '48', width: '48'), "#{@place.link}", alt: "Le Wagon", class:"img-fluid rounded-start"%>
+        <div class="stay-button">Book your stay here</div>
 
-          <p>Amenities:<%= @place.amenities %></p>
-          <p>Price by night: $<%= @place.price_by_night %></p>
-          <p>Number of rooms: <%= @place.number_rooms %></p>
-          <p>Max number of guests: <%= @place.max_guest %></p>
-          <p>Number of bathrooms: <%= @place.number_bathrooms %></p>
-          <p>Address: <%= @place.address %></p>
-            <div>
-              <p><%= @place.view %></p>
-                <div>
-  <%= link_to "Link to #{@place.thirdparty} for booking", @place.link, method: :post %>
+        </div>
+      </div>
+      <div class="map-container">
+        <div class="", id="map"
+          data-marker="<%= @marker.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
 
-  <%= link_to image_tag("#{@place.thirdparty}.jpg",  height: '48', width: '48'), "#{@place.link}", alt: "Le Wagon", class:"img-fluid rounded-start"%>
+    </div>
 
-</div>
-
-    <div class="row justify-content-center", id="map"
-      data-marker="<%= @marker.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
-<%= link_to 'Favorite', place_wishlists_path(@place), method: :post %>
-</div>
-</div>
-</div>
+    <%# <%= link_to 'Favorite', place_wishlists_path(@place), method: :post %>
+  </div>
 </div>
