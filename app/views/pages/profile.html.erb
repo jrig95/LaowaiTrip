@@ -4,11 +4,9 @@
 </div>
 
  <div class="card-main">
- <div class="card-main-img">
   <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill,class:"image" %>
-    <div class="profile-photo-upload-selectors">
-    <p>change profile picture</p>
+    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+    <h2>change profile picture</h2>
         <%= simple_form_for(@user) do |f| %>
       <%= f.input :photo, as: :file %>
       <%= f.submit %>
@@ -20,8 +18,6 @@
     <% end %>
     <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
   <% end %>
-  </div>
-  </div>
   <div class="card-contents">
   <span>
    <h3> <%= @user.name %>
@@ -31,6 +27,10 @@
    </span>
 
   <div class="list-group">
+    <div><div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" class="svg-plane" viewBox="0 0 512 512"><path d="m170.254 347.529 30.414 59.95a5.75 5.75 0 0 0 8.133.006l16.94-16.94-14.344-55.429a54.664 54.664 0 0 0 14.424-10.4l55.813-51.458 72.332 131.415a7.62 7.62 0 0 0 10.78.002l27.166-27.168-48.495-162.038 53.835-50.356c14.813-14.82 15.468-38.188 1.467-52.19-14.01-14.004-37.373-13.35-52.193 1.466l-50.727 54.231-160.95-48.18-27.168 27.17a7.62 7.62 0 0 0 0 10.78l130.5 71.823-51.256 55.607a54.437 54.437 0 0 0-10.636 14.896l-54.47-14.098-16.941 16.944a5.751 5.751 0 0 0 0 8.13l59.947 30.41z" data-name="Airplane01"/></svg><h2>Upcoming Trips</h2></div></div>
+    <div><div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" class="svg-globe" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg><h2>Past Trips</h2></div></div>
     <div><div class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" class="svg-heart" viewBox="0 0 20 20" fill="currentColor">
   <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
   </svg><h2>Wishlist</h2>
@@ -39,10 +39,10 @@
       <% end %>
   </div>
  </div>
-
   </div>
  </div>
-</div>
+
 
  </div>
   </div>
+   </div>

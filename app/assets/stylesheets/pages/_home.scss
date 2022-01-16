@@ -289,10 +289,10 @@ color: black;
 
 }
 
-// profile Page
+
 
 .background-svg{
-background: linear-gradient(to right,#F7C32A 0%, #F7C32A 40%, #FFF 40%);
+background: linear-gradient(to right,#F4BA13 0%, #F4BA13 50%, #FFF 40%);
 padding: 60px 0;
 }
 
@@ -302,30 +302,13 @@ padding: 60px 0;
   padding-top: 0px;
 
 }
-.image{
-display: block;
-min-width: 100%;
-height: 73vh;
-object-fit: fill;
 
-}
-
-.profile-photo-upload-selectors{
-  font-size: 12px;
-  padding: 1rem;
-  color: black;
-  backdrop-filter: blur(14px) brightness(80%);
-  display: inline-flex;
-  width:450px;
-}
 .card-main {
   height: 500px;
-  width:90%;
-  background: linear-gradient(to right,#F4BA13 0%, #F4BA13 45%, #FFF 40%);
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-left: 60px;
 }
 
 .p place-amenities {
@@ -338,26 +321,15 @@ object-fit: fill;
 .card-main h3{
   font-weight: bold;
   font-size: 18px;
-  padding-left: 60px;
+  padding-left: 12px;
   font-family: 'Montserrat';
-  margin-top: 0px;
 }
 
-.card-main-img {
+.card-main img {
   height: 100%;
-  width: 500px;
+  width: 340px;
   object-fit:cover;
-  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  align-items: center;
-  // border: 50px solid #F4BA13;
-  justify-content: center;
-  padding-left:70px ;
-  padding-right:70px;
-  padding-top: 60px;
-  text-align: center;
-
 }
-
 
 .list-group-item{
   height: 120px;
@@ -366,8 +338,8 @@ object-fit: fill;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
-  width: 570px;
-  left: 50px;
+  width: 700px;
+  left: 8px;
   margin-bottom: 14px;
 }
 
@@ -388,10 +360,7 @@ object-fit: fill;
  height: 50px;
  padding-right: 8px;
 }
-.svg-plane {
- height: 60px;
- padding-right: 8px;
-}
+
 // home page css
 .h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -418,7 +387,10 @@ form{
   color: white;
 }
 
-
+.svg-plane {
+ height: 60px;
+ padding-right: 8px;
+}
 
 
 // CSS - Show page
@@ -585,11 +557,11 @@ form{
 }
 
 .sign-up-card{
-  // background: white;
-  background-color:rgba(196, 196, 196, 0.334);
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   align-items: center;
   border: 8px solid #F4BA13;
+
   justify-content: center;
   display: block;
   margin-left: auto;
@@ -605,7 +577,6 @@ font-weight:bold;
 justify-content: center;
 padding-top: 25px;
 color:black;
-padding-left: 40px;
 }
 
 .sign-up-button{
@@ -616,6 +587,7 @@ padding-left: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .form-inputs{
@@ -623,6 +595,8 @@ padding-left: 40px;
   flex-direction:column;
   justify-content: center;
   align-items: center;
+
+
 }
 .input-label{
   font-size: 14px !important;
@@ -631,11 +605,8 @@ padding-left: 40px;
 
 
 .hint-email{
-  font-size: 12px !important;
+  font-size: 10px !important;
   justify-content: left;
-  font-weight:bold;
-  color:black;
-  font-family: 'Montserrat';
 }
 .login-button{
  background-color: #F4BA13;
@@ -645,73 +616,15 @@ padding-left: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+
   text-decoration: none;
   margin-left: 45px;
+
+
 }
-
-
-a:link {
+.button-a {
+   color: #FFF;
   text-decoration: none;
-  color: #FFF;
- }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
 
-
-// sign in page
-.city-background-image{
-  background-image: url('https://images.unsplash.com/photo-1517309230475-6736d926b979?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
-  min-width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-}
-.sign-in-card {
-  background-color:rgba(196, 196, 196, 0.355);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  align-items: center;
-  border: 8px solid #F4BA13;
-  justify-content: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  min-height: 85vh;
-  padding-left: 90px;
-}
-
-.sign-in-card h2{
-font-size: 32px;
-font-weight:bold;
-justify-content: center;
-padding-top: 25px;
-color:black;
-margin-left: auto;
-margin-right: auto;
-padding-left: 50px;
 
 }
-
-
-.log-in-button{
-  background-color: #F4BA13;
-  border-radius: 2%;
-  width: 100px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-margin-left: auto;
-  margin-right: auto;
-}
-
-.form-inputs{
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-}
-a:link { text-decoration: none; }
-

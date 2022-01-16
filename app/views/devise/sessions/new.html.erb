@@ -1,31 +1,20 @@
-<div class="city-background-image">
-
- <div class="sign-in-card">
 <h2>Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
-    <div class="input-label"><%= f.input :email,
+    <%= f.input :email,
                 required: false,
                 autofocus: true,
-                placeholder:"email",
-                label:false,
                 input_html: { autocomplete: "email" } %>
-                 </div>
-     <div class="input-label"><%= f.input :password,
+    <%= f.input :password,
                 required: false,
-                placeholder:"password",
-                label:false,
                 input_html: { autocomplete: "current-password" } %>
-                 </div>
-   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  </div>
 
-
-
-    <%= f.button :submit, "Log in", class:"log-in-button"  %>
-
+  <div class="form-actions">
+    <%= f.button :submit, "Log in" %>
+  </div>
 <% end %>
-   </div>
+
 <%= render "devise/shared/links" %>
- </div>
- </div>
