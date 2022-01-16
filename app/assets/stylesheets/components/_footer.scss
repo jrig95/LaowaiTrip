@@ -17,11 +17,12 @@
 
 .footer-links a {
   color: black;
-
+  margin-right: 30px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0px 10px;
   transition: 500ms linear;
+  overflow: auto;
 }
 
 .footer-links a:hover {

@@ -119,6 +119,81 @@
   align-items: center;
 }
 
+// carousel css
+.carousel form{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+section .search-info{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item img {
+      height: 84vh
+}
+
+div#carouselExampleFade{
+    position:relative;
+}
+
+div.form-group {
+    position:absolute;
+    z-index:9999999;
+    top: 268px; /* change to whatever you want */ /* change to whatever you want */
+    right:auto; /* change to whatever you want */
+    bottom:auto; /* change to whatever you want */
+    display: block;
+    height:25%;
+//     width: 100%;
+//     font-size: 0.875rem;
+//     line-height: 1.5;
+//     color: #55595c;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     height: calc(3rem + 2px) !important;
+    // border-radius:0;
+}
+// .search-sec{
+//     padding: 2rem;
+// }
+// .search-slt{
+//     display: block;
+//     width: 100%;
+//     font-size: 0.875rem;
+//     line-height: 1.5;
+//     color: #55595c;
+//     background-color: #fff;
+//     background-image: none;
+//     border: 1px solid #ccc;
+//     height: calc(3rem + 2px) !important;
+//     border-radius:0;
+// }
+// .wrn-btn{
+//     width: 100%;
+//     font-size: 16px;
+//     font-weight: 400;
+//     text-transform: capitalize;
+//     height: calc(3rem + 2px) !important;
+//     border-radius:0;
+// }
+// @media (min-width: 992px){
+//     .search-sec{
+//         position: relative;
+//         top: -114px;
+//         background: rgba(26, 70, 104, 0.51);
+//     }
+// }
+
+// @media (max-width: 992px){
+//     .search-sec{
+//         background: #1A4668;
+//     }
+// }
+
 // end of home page
 
 .index__container {
@@ -158,7 +233,8 @@ width: 100%;
 // index page
 .card {
 border: solid 4px #F4BA13;
-box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+// box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+box-shadow: 6px 4px 6px #ccc;
 }
 
 
@@ -167,6 +243,7 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   border-radius: 2%;
   width: 130px;
   height: 40px;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,6 +253,12 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 .button a {
   text-decoration: none;
   color: white;
+}
+
+.hotel-image{
+  width: 100%;
+  object-fit: fill;
+  height: 300px;
 }
 
 
@@ -191,13 +274,25 @@ box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   text-decoration: none;
 }
 
-.card-text{
-  color: pink;
+.card-title{
+  font-size: 30px;
+  font-weight: bold;
 }
 
+.city-name{
+color: black;
+
+}
+
+.card-description{
+ color: black;
+
+}
+
+// profile Page
 
 .background-svg{
-background: linear-gradient(to right,#F4BA13 0%, #F4BA13 50%, #FFF 40%);
+background: linear-gradient(to right,#F7C32A 0%, #F7C32A 40%, #FFF 40%);
 padding: 60px 0;
 }
 
@@ -207,13 +302,30 @@ padding: 60px 0;
   padding-top: 0px;
 
 }
+.image{
+display: block;
+min-width: 100%;
+height: 73vh;
+object-fit: fill;
 
+}
+
+.profile-photo-upload-selectors{
+  font-size: 12px;
+  padding: 1rem;
+  color: black;
+  backdrop-filter: blur(14px) brightness(80%);
+  display: inline-flex;
+  width:450px;
+}
 .card-main {
   height: 500px;
-  background: white;
+  width:90%;
+  background: linear-gradient(to right,#F4BA13 0%, #F4BA13 45%, #FFF 40%);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin-left: 60px;
 }
 
 .p place-amenities {
@@ -226,15 +338,26 @@ padding: 60px 0;
 .card-main h3{
   font-weight: bold;
   font-size: 18px;
-  padding-left: 12px;
+  padding-left: 60px;
   font-family: 'Montserrat';
+  margin-top: 0px;
 }
 
-.card-main img {
+.card-main-img {
   height: 100%;
-  width: 340px;
+  width: 500px;
   object-fit:cover;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  // border: 50px solid #F4BA13;
+  justify-content: center;
+  padding-left:70px ;
+  padding-right:70px;
+  padding-top: 60px;
+  text-align: center;
+
 }
+
 
 .list-group-item{
   height: 120px;
@@ -243,8 +366,8 @@ padding: 60px 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
-  width: 700px;
-  left: 8px;
+  width: 570px;
+  left: 50px;
   margin-bottom: 14px;
 }
 
@@ -265,7 +388,10 @@ padding: 60px 0;
  height: 50px;
  padding-right: 8px;
 }
-
+.svg-plane {
+ height: 60px;
+ padding-right: 8px;
+}
 // home page css
 .h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -292,13 +418,11 @@ form{
   color: white;
 }
 
-.svg-plane {
- height: 60px;
- padding-right: 8px;
-}
+
 
 
 // CSS - Show page
+
 
 .place-name  {
   font-family: 'Montserrat';
@@ -456,32 +580,138 @@ form{
   min-width: 100%;
   min-height: 100vh;
   background-size: cover;
+//   display: flex;
+//   align-items: center;
 }
 
 .sign-up-card{
-  width: 500px;
-  height: 400px;
-  background: white;
+  // background: white;
+  background-color:rgba(196, 196, 196, 0.334);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
   border: 8px solid #F4BA13;
-  margin-left: 350px;
- justify-content: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  min-height: 85vh;
+  padding-left: 90px;
 }
 
 .sign-up-card h2{
 font-size: 32px;
-font-weight:medium;
-margin-bottom: 50px;
+font-weight:bold;
+justify-content: center;
+padding-top: 25px;
+color:black;
+padding-left: 40px;
 }
 
 .sign-up-button{
   background-color: #F4BA13;
   border-radius: 2%;
   width: 130px;
-  height: 40px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.form-inputs{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.input-label{
+  font-size: 14px !important;
+  min-width: 60%;
+}
+
+
+.hint-email{
+  font-size: 12px !important;
+  justify-content: left;
+  font-weight:bold;
+  color:black;
+  font-family: 'Montserrat';
+}
+.login-button{
+ background-color: #F4BA13;
+  border-radius: 2%;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  margin-left: 45px;
+}
+
+
+a:link {
+  text-decoration: none;
+  color: #FFF;
+ }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+
+// sign in page
+.city-background-image{
+  background-image: url('https://images.unsplash.com/photo-1517309230475-6736d926b979?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  min-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+}
+.sign-in-card {
+  background-color:rgba(196, 196, 196, 0.355);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  border: 8px solid #F4BA13;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  min-height: 85vh;
+  padding-left: 90px;
+}
+
+.sign-in-card h2{
+font-size: 32px;
+font-weight:bold;
+justify-content: center;
+padding-top: 25px;
+color:black;
+margin-left: auto;
+margin-right: auto;
+padding-left: 50px;
+
+}
+
+
+.log-in-button{
+  background-color: #F4BA13;
+  border-radius: 2%;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+margin-left: auto;
+  margin-right: auto;
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+a:link { text-decoration: none; }
+

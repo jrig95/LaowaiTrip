@@ -1,34 +1,51 @@
 <div class="china-background-image">
+<div class="form-wrapper">
  <div class="sign-up-card">
- <h2>Sign up</h2>
+ <div class="input-container">
+ <h2>Sign Up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-  <%= f.input :name,
+   <div class="input-label"><%= f.input :name,
                 required: true,
                 autofocus: true,
+                placeholder:"name",
+                label:false,
                 input_html: { autocomplete: "name" }%>
-    <%= f.input :email,
+                </div>
+    <div class="input-label"><%= f.input :email,
                 required: true,
                 autofocus: true,
+                placeholder:"email",
+                label:false,
                 input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
+                  </div>
+   <div class="input-label"><%= f.input :password,
                 required: true,
+                placeholder:"password",
+                label:false,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+                hint_html:{class:"hint-email"},
+                input_html: { autocomplete: "new-password"}%>
+
+                  </div>
+   <div class="input-label"><%= f.input :password_confirmation,
                 required: true,
+                placeholder:"confirm password",
+                label:false,
                 input_html: { autocomplete: "new-password" } %>
-  </div>
-<div class="sign-up-button">
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+                  </div>
+
+    <%= f.button :submit, "Sign up",class:"sign-up-button" %>
 
  <% end %>
 </div>
+<a href="#">
+ <div class="login-button"><%= render "devise/shared/links" %></div>
+</a>
+</div>
+</div>
+</div>
  </div>
- <%= render "devise/shared/links" %>
-</div>
-</div>
