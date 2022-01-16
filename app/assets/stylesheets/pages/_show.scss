@@ -1,0 +1,98 @@
+.show-container {
+  padding: 50px;
+  font-family: 'Montserrat';
+  font-size: larger;
+  font-size: 25px;
+}
+
+.show-room-container {
+  font-size: 15px;
+  margin-bottom: -34px;
+}
+
+.btn-flat {
+  border-radius: 4px;
+  background:  #F4BA13;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+  padding: 8px 24px;
+  border: 2px solid #F4BA13;
+  margin-top: 27px;
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.btn-flat:hover {
+  background: white;
+  color: #F4BA13;
+  border: 2px solid #F4BA13;
+  a {
+    text-decoration: none;
+    color: #F4BA13;
+  }
+  .fa-heart {
+  color: #F4BA13;
+}
+}
+
+.place-info-headline {
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-size: 20px;
+}
+
+.place-photos {
+  padding: 50px;
+  margin-bottom: 20px;
+  margin-top: -40px;
+}
+
+.info-container {
+  width: 50%;
+}
+
+.map-container {
+  width: 50%
+}
+
+.hotel-info-container {
+  background-color: white;
+  font-size: 15px;
+  // border: 3px solid red;
+}
+
+.hotel-info {
+  font-family: 'Montserrat';
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 50px 0px;
+  padding: 50px;
+  margin-top: 32px;
+  height: fit-content;
+  margin-bottom: 16px;
+  margin-right: 20px;
+}
+
+.stay-book-hotel {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#map {
+  // width: 100%;
+  margin-top: 32px;
+  height: 256.5px;
+  width: 484.5px;
+}
+
+.stay-button {
+  background-color:#F4BA13;
+  border-radius: 1px;
+  padding:13px;
+}
+
+.fa-heart {
+  color: white;
+}
