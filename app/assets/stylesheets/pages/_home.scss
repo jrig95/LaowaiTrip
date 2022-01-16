@@ -295,6 +295,7 @@ color: black;
 background: linear-gradient(to right,#F7C32A 0%, #F7C32A 40%, #FFF 40%);
 padding: 60px 0;
 }
+
 .background-svg h1 {
   font-size: 64px;
   font-weight:bolder;
@@ -326,6 +327,14 @@ object-fit: fill;
   align-items: center;
   margin-left: 60px;
 }
+
+.p place-amenities {
+  font-size: large;
+  font-weight: normal;
+  padding-bottom: 10px;
+
+}
+
 .card-main h3{
   font-weight: bold;
   font-size: 18px;
@@ -414,26 +423,156 @@ form{
 
 // CSS - Show page
 
-// h2 {
-//   font-family: 'Montserrat';
-//   font-style: normal;
-//   font-size: 40px;
-//   padding-top: 20px;
-//   padding-left: 44px;
-//   margin-bottom: 20px;
-// }
 
-// p {
-//   font-family: 'Montserrat';
-//   font-weight: bolder;
-//   font-size: 25px;
-//   padding-left: 44px;
-//   padding-top: 10px;
-//   margin-top: 20px;
-// }
+.place-name  {
+  font-family: 'Montserrat';
+  font-style: bolder;
+  font-size: 45px;
+  padding-top: 20px;
+  padding-left: 44px;
+  margin-bottom: -36px;
+}
+
+.p {
+  margin-bottom: 10px;
+  font-size: 30px;
+  margin-top: 55px;
+  margin-left: 43px;
+  margin-bottom: 18px;
+
+}
+
+.p1 {
+  font-size: 20px;
+}
+
+.p2 place-info {
+  margin-bottom: 10px;
+}
 
 
+.place-info-hotel-cards  {
+  font-family: 'Montserrat';
+  font-weight: italic;
+  font-size: 25px;
+  padding-left: 44px;
+  padding-top: 10px;
+  margin-left: -5px;
+  display: list-item;
+}
 
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background:  #F4BA13;
+  transition: background 0.3s ease;
+  margin-left: 41px;
+  margin-bottom: 10px;
+}
+
+.btn-flat:hover {
+  background: #c4fa03;
+  color: black;
+  margin-bottom: 16px;
+}
+
+.a {
+  color: black;
+}
+ img {
+  margin-left: 40px;
+}
+
+.place-photos{
+  border-radius: 10px;
+}
+.place-amenities {
+  margin-left: 4px;
+  font-size: 25px;
+}
+
+.price {
+  margin-top: 50px;
+}
+
+.place-card-tub {
+  overflow: hidden;
+  height: 200px;
+  display: list-item;
+  align-items: left;
+  background-color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: 1294px;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.place-card-yuan {
+  overflow: hidden;
+  height: 200px;
+  display:list-item;
+  align-items: left;
+  background-color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: 1294px;
+  padding-top: 20px;
+
+}
+
+.place-card-rooms {
+  overflow: hidden;
+  height: 200px;
+  display:list-item;
+  align-items: left;
+  background-color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: 1294px;
+  padding-top: 20px;
+}
+
+.place-card-guest {
+  overflow: hidden;
+  height: 200px;
+  display:list-item;
+  align-items: left;
+  background-color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: 1294px;
+  padding-top: 20px;
+
+}
+
+.place-card-bathroom {
+  overflow: hidden;
+  height: 200px;
+  display:list-item;
+  align-items: left;
+  background-color:white;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding-right: 60px;
+  padding-left: 60px;
+  margin-bottom: 20px;
+  width: 1294px;
+  padding-top: 20px;
+}
 // sign up page
 
 .china-background-image{
