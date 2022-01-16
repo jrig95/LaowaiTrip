@@ -10,9 +10,9 @@
   <div class="btn btn-flat"> <i class="far fa-heart"></i> <%= link_to 'Wishlist', place_wishlists_path(@place),method: :post %></div>
 </div>
 
-  <div class="show-photos">
+  <div class="show-photos d-flex justify-content-between">
     <% @place.photos.each do |photo|  %>
-      <%= cl_image_tag photo.key, height: 263, width: 350, crop: :fill, class: "object-cover h-80 w-full card-image" %>
+      <%= cl_image_tag photo.key, height: 263, width: 470, crop: :fill, class: "object-cover h-80 w-full card-image" %>
     <% end %>
   </div>
 
