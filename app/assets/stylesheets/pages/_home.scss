@@ -309,7 +309,7 @@ form{
   margin-bottom: -36px;
 }
 
-p {
+.p {
   margin-bottom: 10px;
   font-size: 30px;
   margin-top: 55px;
@@ -322,13 +322,7 @@ p {
   font-size: 20px;
 }
 
-.p2 {
-  font-size: 15;
-  font-style: normal;
-
-}
-
-.place-info {
+.p2 place-info {
   margin-bottom: 10px;
 }
 
@@ -378,7 +372,7 @@ p {
   margin-top: 50px;
 }
 
-div.place-card-tub {
+.place-card-tub {
   overflow: hidden;
   height: 200px;
   display: list-item;
@@ -394,7 +388,7 @@ div.place-card-tub {
   padding-top: 20px;
 }
 
-div.place-card-yuan {
+.place-card-yuan {
   overflow: hidden;
   height: 200px;
   display:list-item;
@@ -410,7 +404,7 @@ div.place-card-yuan {
 
 }
 
-div.place-card-rooms {
+.place-card-rooms {
   overflow: hidden;
   height: 200px;
   display:list-item;
@@ -425,7 +419,7 @@ div.place-card-rooms {
   padding-top: 20px;
 }
 
-div.place-card-guest {
+.place-card-guest {
   overflow: hidden;
   height: 200px;
   display:list-item;
@@ -441,7 +435,7 @@ div.place-card-guest {
 
 }
 
-div.place-card-bathroom {
+.place-card-bathroom {
   overflow: hidden;
   height: 200px;
   display:list-item;
