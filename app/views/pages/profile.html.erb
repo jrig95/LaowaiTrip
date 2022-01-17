@@ -5,7 +5,7 @@
 
  <div class="card-main">
   <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @user.photo.key, crop: :fill %>
     <h2>change profile picture</h2>
         <%= simple_form_for(@user) do |f| %>
       <%= f.input :photo, as: :file %>
