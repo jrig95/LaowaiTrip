@@ -44,11 +44,19 @@
   font-size: 20px;
 }
 
+
 .place-photos {
   padding: 50px;
   margin-bottom: 20px;
   margin-top: -40px;
+  gap: 10px;
 }
+
+.show-photos {
+  justify-content: space-between;
+  column-gap: 5px;
+}
+
 
 .info-container {
   width: 50%;
