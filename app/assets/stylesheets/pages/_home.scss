@@ -377,6 +377,7 @@ input[type="file"] {
   margin-top: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 100%;
 
 }
 
@@ -409,7 +410,7 @@ input[type="file"] {
 }
 
 .profile-img{
-  margin-right: 10px;
+  margin-right: 17px;
   margin-bottom: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -426,6 +427,25 @@ input[type="file"] {
   font-weight:bold;
 }
 
+.delete_btn{
+  color:black;
+  // margin-bottom: 1rem;
+  // border: 1px solid black;
+  //   /* background: white; */
+  //   color: black;
+  //   padding-right: 5px;
+  //   padding-left: 5px;
+  //   border-radius: 10%;
+}
+
+.delete_btn:hover{
+color: #FAF9F6;
+// border: 1px solid #FAF9F6;
+}
+
+.hotel-place{
+  margin-bottom: 5px;
+}
 
 .list-group-item{
   background: #F7C32A ;
@@ -436,9 +456,18 @@ input[type="file"] {
   width: 350px;
 }
 
+.wishlist_place p{
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
 .wishlist{
   border: none;
   margin-top: 20px;
+}
+
+.wishlist-container{
+      min-height: 200px;
 }
 
 .list-group-item h2 {
@@ -447,6 +476,11 @@ input[type="file"] {
 }
 .svg-heart {
  height: 25px;
+}
+
+.custom-file-upload:hover{
+  color: #F7C32A;
+  cursor: pointer;
 }
 
 

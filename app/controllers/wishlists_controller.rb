@@ -12,4 +12,14 @@ class WishlistsController < ApplicationController
       flash[:alert] = "Favorite failed to save."
     end
   end
+
+  def destroy
+    @wishlist = Wishlist.find(params[:id])
+    if @wishlist.destroy!
+    flash[:notice] = "Place has been deleted!"
+    redirect_to profile_path
+    else
+      flash[:alert] = "Failed to delete place"
+    end
+  end
 end

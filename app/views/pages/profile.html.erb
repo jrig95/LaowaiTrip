@@ -7,12 +7,13 @@
       <% if @user.photo.attached? %>
         <%= cl_image_tag @user.photo.key, height: 150, width: 150, crop:  :thumb, gravity: :face,class:"rounded-circle profile-img" %>
       <% else %>
-        <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" />
+      <%= image_tag "https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg", height: 150, width: 150, alt: "Le Wagon", class: "rounded-circle profile-img" %>
+        <%# <img src="https://hips.hearstapps.com/hbz.h-cdn.co/assets/cm/14/52/5499934cd8ef3_-_hbz-beauty-secrets-lupiita-promo-lgn.jpg" /> %>
       <% end %>
       <div class="email_submit_div">
-      <h3> <%= @user.name %>
+      <h3 style="word-break: break-word;"> <%= @user.name %>
         </h3>
-        <h3> <%= @user.email %>
+        <h3 style="word-break: break-word;"> <%= @user.email %>
         </h3>
       <div class="upload-btns">
         <label for="file-upload" class="custom-file-upload">
@@ -37,7 +38,13 @@
             </div>
             <div class="wishlist_place">
             <% @user.wishlists.each do |w| %>
-              <p>- <%= link_to w.place.place_name.truncate(39, separator: '', omission: '...'), place_path(w.place), class:"favorited_place"%></p>
+            <div class="d-flex align-items-center hotel-place">
+              <p>- <%= link_to w.place.place_name.truncate(35, separator: '', omission: '...'), place_path(w.place), class:"favorited_place"%></p>
+              <%= link_to wishlist_path(w), class:"delete_btn", :method => :delete do%>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+            </div>
+
             <% end %>
           </div>
           </div>
