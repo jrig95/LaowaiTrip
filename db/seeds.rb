@@ -9,8 +9,6 @@
 # Place.destroy_all
 puts "Creating places..."
 require "open-uri"
-first_user = User.first
-
 
 # Shanghai Places
   # 1. W on the Bund/ Trip.com

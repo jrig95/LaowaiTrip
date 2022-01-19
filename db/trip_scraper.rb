@@ -8,9 +8,7 @@ require 'open-uri'
 class Scrape
   def trip_scraper
     # A hash of cities and their city id's according to Trip.com for each city's index page
-    cities = {"Beijing" => 1, "Shanghai" => 2}
-
-    # , "Tianjin" => 3, "Chongqing" => 4, "Harbin" => 5, "Dalian" => 6, "Qingdao" => 7, "Xi'an" => 7, "Dunhuang" => 11, "Nanjing" => 12, "Suzhou" => 14, "Hangzhou" => 17, "Xiamen" => 26, "Zhangjiajie" => 27, "Chengdu" => 28, "Shenzhen" => 30, "Zhuhai" => 31, "Guangzhou" => 32, "Guilin" => 33, "Kunming" => 34, "Xishuangbanna" => 35, "Dali" => 36, "Lijiang" => 37, "Guiyang" => 38, "Wulumuqi" => 39, "Lhasa" => 41, "Haikou" => 42, "Sanya" => 43, "Wanning" => 45, "Wuhan" => 477, "Shenyang" => 451, "Fuzhou" => 258, "Huizhou" => 299, "Yangshuo" => 871 }
+    cities = {"Beijing" => 1, "Shanghai" => 2, "Tianjin" => 3, "Chongqing" => 4, "Harbin" => 5, "Dalian" => 6, "Qingdao" => 7, "Xi'an" => 7, "Dunhuang" => 11, "Nanjing" => 12, "Suzhou" => 14, "Hangzhou" => 17, "Xiamen" => 26, "Zhangjiajie" => 27, "Chengdu" => 28, "Shenzhen" => 30, "Zhuhai" => 31, "Guangzhou" => 32, "Guilin" => 33, "Kunming" => 34, "Xishuangbanna" => 35, "Dali" => 36, "Lijiang" => 37, "Guiyang" => 38, "Wulumuqi" => 39, "Lhasa" => 41, "Haikou" => 42, "Sanya" => 43, "Wanning" => 45, "Wuhan" => 477, "Shenyang" => 451, "Fuzhou" => 258, "Huizhou" => 299, "Yangshuo" => 871 }
 
     # create empty arrays of hotels and index_urls
     index_urls = []
@@ -80,8 +78,8 @@ class Scrape
         # creating a hash of a hotel
         hotel = {
         link: show_url,
-        name: parsed_page.css("h1.detail-headline_name").text,
-        city: city,
+        place_name: parsed_page.css("h1.detail-headline_name").text,
+        city_name: city,
         city_id: city_id,
         rating: parsed_page.css('b.detail-headreview_score_value')[0].children.text,
         address: parsed_page.css('span.detail-headline_position_text').text,
