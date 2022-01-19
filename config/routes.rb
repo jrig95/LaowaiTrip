@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :places do
-    resources :bookings, only: [:new, :create, :destroy]
-    resources :wishlists, only: [:new, :create, :destroy]
+    resources :bookings, only: [:new, :create]
+    resources :wishlists, only: [:new, :create]
   end
+  resources :wishlists, only: [:destroy]
   get 'profile', to: 'pages#profile', as: "profile"
 
 
