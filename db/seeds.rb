@@ -1,11 +1,11 @@
-require_relative 'trip_scraper'
-require "open-uri"
+# require_relative 'trip_scraper'
+# require "open-uri"
 # # File = Rails.root.join("db", "trip_scraper.rb")
 # puts "Creating places..."
 
-p Scrape
-scrape = Scrape.new
-p scrape.trip_scraper
+# p Scrape
+# scrape = Scrape.new
+# p scrape.trip_scraper
 
 # puts "Cleaning database..."
 # Place.destroy_all
@@ -167,6 +167,41 @@ p scrape.trip_scraper
 #   fourth_chengdu_place.photos.attach(io: fourth_chengdu_place_image_three, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
 #   fourth_chengdu_place.save!
 
+# puts "Done"
 
 
-puts "Done"
+# option 1
+# csv = Rails.root.join("db","places.csv")
+
+# places = []
+# CSV.foreach(csv, headers: true, col_sep: ";") do |row|
+#      objects << row.to_h
+# end
+
+
+csv = Rails.root.join("db","places.csv")
+
+CSV.foreach(csv, headers: true, col_sep: "|") do |row|
+     place = Place.new(
+        link: row["link"],
+        place_name: row["place_name"],
+        city_name: row["city_name"],
+        price_by_night: row["price_by_night"],
+        rating: row["rating"],
+        address: row["address"],
+        image: row["images"],
+        amenities: row["amenities"],
+        description: row["description"],
+        thirdparty: row["thirdparty"],
+        image_one: row["image_one"],
+        image_two: row["image_two"],
+        image_three: row["image_three"]
+    )
+     place.images.attach(io: URI.open(row["image_one"]), filename: "hotel.jpg")
+     place.images.attach(io: URI.open(row["image_two"]), filename: "hotel.jpg")
+     place.images.attach(io: URI.open(row["image_three"]), filename: "hotel.jpg")
+
+    # finally
+    place.save
+
+end
