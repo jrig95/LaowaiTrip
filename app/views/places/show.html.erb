@@ -26,7 +26,7 @@
           <p> <i class="fas fa-hotel"></i> Special features: <%= @place.view %></p>
         </div>
         <div class="stay-book-hotel">
-        <%= link_to image_tag("#{@place.thirdparty}.jpg",  height: '48', width: '48'), "#{@place.link}", alt: "Le Wagon", class:"img-fluid rounded-start"%>
+        <%= link_to image_tag("#{@place.thirdparty}.jpg", height: '48', width: '48'), "#{@place.link}", target: :_blank, alt: "Le Wagon", class:"img-fluid rounded-start"%>
         <div class="stay-button">Book your stay here</div>
 
         </div>
