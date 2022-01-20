@@ -135,6 +135,10 @@ section .search-info{
   align-items: center;
 }
 
+.carousel-item{
+      transition: transform 0.4s ease-in-out;
+}
+
 .carousel-item img {
       height: 84vh
 }
