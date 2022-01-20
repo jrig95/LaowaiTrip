@@ -1,6 +1,5 @@
 require 'watir'
 require 'webdrivers'
-require 'byebug'
 require 'nokogiri'
 require 'httparty'
 require 'open-uri'
@@ -12,7 +11,7 @@ class Scrape
 
     # create empty arrays of hotels and index_urls
     index_urls = []
-    hotels = []
+    places = []
 
     # iterate over each link
     cities.each do |city, city_id|
@@ -45,6 +44,7 @@ class Scrape
       browser.windows.to_enum.to_a.each_with_index do |window, index|
         if browser.windows.to_enum.to_a[index+1]&.use
           show_urls << browser.url
+          # window.close
         end
       end
 
@@ -60,12 +60,12 @@ class Scrape
         if doc.element(css: "p.price").present?
           js_doc = doc.element(css: "p.price").wait_until(&:present?)
           full_doc = Nokogiri::HTML(js_doc.inner_html)
-          price = full_doc.text
+          price = full_doc.text.delete('$').to_i
         # locating second price location if first price is absent
         elsif doc.element(css: "span.detail-headline-price_price").present?
           js_doc = doc.element(css: "span.detail-headline-price_price").wait_until(&:present?)
           full_doc = Nokogiri::HTML(js_doc.inner_html)
-          price = full_doc.text
+          price = full_doc.text.delete('$').to_i
         else
           js_doc == nil
         end
@@ -76,32 +76,29 @@ class Scrape
         end
 
         # creating a hash of a hotel
-        hotel = {
+        place = {
         link: show_url,
         place_name: parsed_page.css("h1.detail-headline_name").text,
         city_name: city,
-        city_id: city_id,
+        price_by_night: price.to_i,
         rating: parsed_page.css('b.detail-headreview_score_value')[0].children.text,
         address: parsed_page.css('span.detail-headline_position_text').text,
-        photos: [images[0],images[7],images[8]],
+        image: [images[0],images[7],images[8]],
         amenities: parsed_page.css('span.detail-headamenity_name').text,
         description: parsed_page.css('span.detail-headline_desc_text').text,
-        thirdparty: "trip.com",
-        price: price
+        thirdparty: "trip.com"
         }
-
       # pushing hotel hash to hotels array
-      hotels << hotel
+      places << place
       doc.close
-      first_scraped_place = Place.new(hotel)
+      first_scraped_place = Place.new(place)
       first_scraped_place.user = User.first
-
-      first_scraped_place_image_one = URI.open("https:#{place[:image]}")
-      first_scraped_place_image_two = URI.open("https:#{place[:image]}")
-      first_scraped_place_image_three = URI.open("https:#{place[:image]}")
-      first_scraped_place.photos.attach(io: first_scraped_place_image_one, filename: "#{city}_image.jpg", content_type: 'image/jpeg')
-      first_scraped_place.photos.attach(io: first_scraped_place_image_two, filename: "#{city}_image.jpg", content_type: 'image/jpeg')
-      first_scraped_place.photos.attach(io: first_scraped_place_image_three, filename: "#{city}_image.jpg", content_type: 'image/jpeg')
+      first_scraped_place_image_one = URI.open(place[:image][0])
+      first_scraped_place_image_two = URI.open(place[:image][1])
+      first_scraped_place_image_three = URI.open(place[:image][2])
+      first_scraped_place.photos.attach(io: first_scraped_place_image_one, filename: "hotel_image.jpg", content_type: 'image/jpeg')
+      first_scraped_place.photos.attach(io: first_scraped_place_image_two, filename: "hotel_image.jpg", content_type: 'image/jpeg')
+      first_scraped_place.photos.attach(io: first_scraped_place_image_three, filename: "hotel_image.jpg", content_type: 'image/jpeg')
 
       first_scraped_place.save!
       puts "place name saved? #{first_scraped_place.place_name}"
