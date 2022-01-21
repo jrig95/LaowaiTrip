@@ -21,7 +21,7 @@
       <div class="info-container">
         <div class="hotel-info">
           <p><i class="fas fa-shower"></i> Amenities: <%= @place.amenities %></p>
-          <p><i class="fas fa-yen-sign"></i> Price per night: ¥ <%= @place.price_by_night %></p>
+          <p><i class="fas fa-yen-sign"></i> Price per night: ¥ <%= ((@place.price_by_night)*(6.34).round) %></p>
           <p><i class="fas fa-map-marker-alt"></i> Address: <%= @place.address %></p>
           <p> <i class="fas fa-hotel"></i> Special features: <%= @place.view %></p>
         </div>
