@@ -178,8 +178,9 @@
 #      objects << row.to_h
 # end
 
+# require 'csv'
 
-csv = Rails.root.join("db", "places.csv")
+csv = Rails.root.join('db', 'places.csv')
 
 CSV.foreach(csv, headers: true, col_sep: "|") do |row|
      place = Place.new(
@@ -192,14 +193,11 @@ CSV.foreach(csv, headers: true, col_sep: "|") do |row|
         image: row["images"],
         amenities: row["amenities"],
         description: row["description"],
-        thirdparty: row["thirdparty"],
-        # image_one: row["image_one"],
-        # image_two: row["image_two"],
-        # image_three: row["image_three"]
+        thirdparty: row["thirdparty"]
     )
      place.photos.attach(io: URI.open(row["images"][0]), filename: "hotel.jpg")
-     place.photos.attach(io: URI.open(row["image_two"][1]), filename: "hotel.jpg")
-     place.photos.attach(io: URI.open(row["image_three"][2]), filename: "hotel.jpg")
+     place.photos.attach(io: URI.open(row["images"][1]), filename: "hotel.jpg")
+     place.photos.attach(io: URI.open(row["images"][2]), filename: "hotel.jpg")
 
     # finally
     place.save
