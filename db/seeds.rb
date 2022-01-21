@@ -183,10 +183,13 @@ require 'csv'
 # csv = Rails.root.join('db', 'places.csv')
 csv = "#{Rails.root}/db/places.csv"
 
+user = User.first
+
+
 # Aggy: need to create a user to create places
 # Place.destroy_all # This is all commented out because you're seeding on top of the current database
 # User.destroy_all # This is commented out, because you already have a user in your database (local AND heroku)
-user = User.create(email: 'blablabla3@test.com', password: '123456789', name: "Test Test") # Aggy: will just use this new user to create all the places below
+# user = User.create(email: 'blablabla3@test.com', password: '123456789', name: "Test Test") # Aggy: will just use this new user to create all the places below
 
 
 CSV.foreach(csv, headers: true, col_sep: "|") do |row|
