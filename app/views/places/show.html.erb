@@ -1,21 +1,19 @@
 <div class="show-container">
-<div class="show-info">
-  <h2><%= @place.place_name %></h2>
-  <div class="place-info-headline">
-    <p><%= @place.description.truncate(275, seperator: '', omission: '...') %>.</p>
+  <div class="show-info">
+    <h2><%= @place.place_name %></h2>
+    <div class="place-info-headline">
+      <p><%= @place.description.truncate(275, seperator: '', omission: '...') %>.</p>
+    </div>
+    <div class="show-room-container">
+      <p><%= @place.max_guest %>2 guests • <%= @place.number_rooms %>1 bedroom • <%= @place.   number_bathrooms %>1 bathroom </p>
+    </div>
+    <div class="btn btn-flat"> <i class="far fa-heart"></i> <%= link_to 'Wishlist', place_wishlists_path(@place),method: :post %></div>
   </div>
-  <div class="show-room-container">
-    <p><%= @place.max_guest %>2 guests • <%= @place.number_rooms %>1 bedroom • <%= @place.   number_bathrooms %>1 bathroom </p>
-  </div>
-  <div class="btn btn-flat"> <i class="far fa-heart"></i> <%= link_to 'Wishlist', place_wishlists_path(@place),method: :post %></div>
-</div>
-
   <div class="show-photos d-flex justify-content-between">
     <% @place.photos.each do |photo|  %>
       <%= cl_image_tag photo.key, height: 263, width: 470, crop: :fill, class: "object-cover h-80 w-full card-image" %>
     <% end %>
   </div>
-
   <div class="hotel-info-container">
     <div class="d-flex">
       <div class="info-container">
@@ -30,9 +28,8 @@
           <p> <i class="fas fa-hotel"></i> Rating: <%= @place.rating %>/5</p>
         </div>
         <div class="stay-book-hotel">
-        <%= link_to image_tag("#{@place.thirdparty}.jpg", height: '48', width: '48'), "#{@place.link}", target: :_blank, alt: "Le Wagon", class:"img-fluid rounded-start"%>
-        <div class="stay-button">Book your stay here</div>
-
+          <%= link_to image_tag("#{@place.thirdparty}.jpg", height: '48', width: '48'), "#{@place.link}", target: :_blank, alt: "Le Wagon", class:"img-fluid rounded-start"%>
+          <div class="stay-button">Book your stay here</div>
         </div>
       </div>
       <div class="map-container">
@@ -41,11 +38,8 @@
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
-
     </div>
-
     <%# <%= link_to 'Favorite', place_wishlists_path(@place), method: :post %>
   </div>
 </div>
-
 <%# show-photos d-flex justify-content-between padding-right 2px %>
