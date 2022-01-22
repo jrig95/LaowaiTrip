@@ -6,20 +6,16 @@ puts "creating user"
 user = User.first
 # user = User.create(email: 'blablabla3@test.com', password: '123456789', name: "Test Test") # Aggy: will just use this new user to create all the places below
 puts "Creating places..."
-
-Shanghai Places
-  2. Peace Hotel/ Trip.com
+# Shanghai Places
+#   2. Peace Hotel/ Trip.com
   second_place_image_one = URI.open('https://images.getaroom-cdn.com/image/upload/s--Y55dO4d_--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1620722391/abfa10e5894f5f001b68f34605e400fc5c666a6d?atc=e7cd1cfa')
   second_place_image_two = URI.open('https://cdn.kiwicollection.com/media/property/PR008349/xl/008349-01-exterior-shaghai-skyline.jpg?cb=1435069697')
   second_place_image_three = URI.open('https://ak-d.tripcdn.com/images/20080m000000dh47mF827_Z_1080_808_R5_D.jpg')
   second_place = Place.new(user: user, city_name: "Shanghai", place_name: "The Peace Hotel", description: "A beautiful hotel next to the bund", price_by_night: "Sold Out", view: "bund view", available: true,max_guest: 6, number_bathrooms: 2, address:"20 East Nanjing Road, Shanghai, China",number_rooms: 4, amenities: "washer and dryer, towel rack, hot tub", link: "https://us.trip.com/hotels/shanghai-hotel-detail-375539/fairmont-peace-hotel/?cityId=2&checkIn=2022-01-10&checkOut=2022-01-11&adult=1&children=0&crn=1&ages=&travelpurpose=0&curr=USD&link=title&hoteluniquekey=H4sIAAAAAAAAAON6yMjFK8Fo8B8GGIWYOBilTjNyHNrU185s8drYkQEEbkx38AQzHsx2COApBDMdQh0mMdpwgtkmcx0EwYwtMx2UFBRYNGEqDGEMi1a2IFaObVwSLFEMTmwcfU8ZJVhmMH7-KraREaxEocBhByPTCcb3jAuYPk2dxrWLCaroEBMrx1l5CZZTTAyXmBhuMTE8YoKY84qJ4RMTwy-YuiZmhi5mhknMENWzmCGKFjEzCLGC_SKlYGqcaGlgZJJmYmqSZGJolmZpZmiaZpZibJSSnGJmZGyhwK3Ru-19H5uR2ClGYUMzEwMzC0tLC0NzAxO97BSjfAMrZilGNw_GIDYTE0dXI5coGS5mZ79IiL8ZPthLMYcGuygyV3CraNRJOiSxpubphgZnXOQoYOxiZBNg9GCMYFzFyAAAkpvXwXIBAAA", thirdparty: "trip.com", rating: "4.8")
-
   second_place.photos.attach(io: second_place_image_one, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
   second_place.photos.attach(io: second_place_image_two, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
   second_place.photos.attach(io: second_place_image_three, filename: 'shanghai_peace.jpeg', content_type: 'image/jpeg')
-
   second_place.save!
-
   # 3. JW Marriot/ Trip.com
   third_place_image_one = URI.open('https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/95126675.jpg?k=6c74e8b295ad1527ebefea7b56f96a2ac3e6ec49344d089a462b3abca62131e8&o=&hp=1')
   third_place_image_two = URI.open('https://ak-d.tripcdn.com/images/20090a00000056siw14F1_Z_1080_808_R5_D.jpg')
@@ -29,7 +25,6 @@ Shanghai Places
   third_place.photos.attach(io: third_place_image_two, filename: 'shanghai_jw.jpeg', content_type: 'image/jpeg')
   third_place.photos.attach(io: third_place_image_three, filename: 'shanghai_jw.jpeg', content_type: 'image/jpeg')
   third_place.save!
-
   # 4. SH Airbnb
   fourth_place_image_one = URI.open('https://a0.muscache.com/im/pictures/df7d1f00-ae3a-4706-8e4e-884dad8bdb41.jpg?im_w=1200')
   fourth_place_image_two = URI.open('https://a0.muscache.com/im/pictures/5ad9723e-ded5-4093-b930-74679fa37145.jpg?im_w=720')
@@ -39,7 +34,6 @@ Shanghai Places
   fourth_place.photos.attach(io: fourth_place_image_two, filename: 'shanghai_airbnb.jpeg', content_type: 'image/jpeg')
   fourth_place.photos.attach(io: fourth_place_image_three, filename: 'shanghai_airbnb.jpeg', content_type: 'image/jpeg')
   fourth_place.save!
-
   # 5. SH Ritz Carlton
   fifth_place_image_one = URI.open('https://himg1.qunarzz.com/imgs/202103/06/C.C9-FU2C7Jw8os7JXA480s.jpg')
   fifth_place_image_two = URI.open('http://ugcimg.qunarzz.com/imgs/202108/23/Ol4mXmFbmhAL3KOWm1024.jpg')
@@ -49,7 +43,6 @@ Shanghai Places
   fifth_place.photos.attach(io: fifth_place_image_two, filename: 'shanghai_ritz.jpeg', content_type: 'image/jpeg')
   fifth_place.photos.attach(io: fifth_place_image_three, filename: 'shanghai_ritz.jpeg', content_type: 'image/jpeg')
   fifth_place.save!
-
   # 6. SH Hostelworld
   sixth_place_image_one = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/4/46215/65.jpg')
   sixth_place_image_two = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/4/46215/23.jpg')
@@ -60,9 +53,7 @@ Shanghai Places
   sixth_place.photos.attach(io: sixth_place_image_two, filename: 'shanghai_ritz.jpeg', content_type: 'image/jpeg')
   sixth_place.photos.attach(io: sixth_place_image_three, filename: 'shanghai_ritz.jpeg', content_type: 'image/jpeg')
   sixth_place.save!
-
   # Sanya Places
-
   # 1. Sanya Atlantis
   first_sanya_place_image_one = URI.open('https://ak-d.tripcdn.com/images/200s1900000169opw2822_Z_1080_808_R5_D.jpg')
   first_sanya_place_image_two = URI.open('https://ak-d.tripcdn.com/images/0204q120008vlcih67860_Z_1080_808_R5_D.jpg')
@@ -72,7 +63,6 @@ Shanghai Places
   first_sanya_place.photos.attach(io: first_sanya_place_image_two, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   first_sanya_place.photos.attach(io: first_sanya_place_image_three, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   first_sanya_place.save!
-
   # 2. Houhai Airbnb
   second_sanya_place_image_one = URI.open('https://z1.muscache.cn/im/pictures/miso/Hosting-40930487/original/f695bfaf-f7e0-4580-8e5d-1af1aca472cd.jpeg?im_w=1200')
   second_sanya_place_image_two = URI.open('https://z1.muscache.cn/im/pictures/miso/Hosting-40930487/original/91efed73-cb54-41e5-83b3-ee23f580436a.jpeg?im_w=1440')
@@ -82,7 +72,6 @@ Shanghai Places
   second_sanya_place.photos.attach(io: second_sanya_place_image_two, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   second_sanya_place.photos.attach(io: second_sanya_place_image_three, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   second_sanya_place.save!
-
   # 3. qunar sanya
   third_sanya_place_image_one = URI.open('https://himg1.qunarzz.com/imgs/202106/01/C.awmrM-9aZ6iRDa7EZ480s.jpg')
   third_sanya_place_image_two = URI.open('http://ugcimg.qunarzz.com/imgs/202111/23/gvGt76vhuRYkGk3Ug1024.jpg')
@@ -92,7 +81,6 @@ Shanghai Places
   third_sanya_place.photos.attach(io: third_sanya_place_image_two, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   third_sanya_place.photos.attach(io: third_sanya_place_image_three, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   third_sanya_place.save!
-
   # 4. hostelworld sanya
   fourth_sanya_place_image_one = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/5/5666/1.jpg')
   fourth_sanya_place_image_two = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/5/5666/tkpo8owr2jujeocdjdzw')
@@ -102,9 +90,7 @@ Shanghai Places
   fourth_sanya_place.photos.attach(io: fourth_sanya_place_image_two, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   fourth_sanya_place.photos.attach(io: fourth_sanya_place_image_three, filename: 'sanya.jpeg', content_type: 'image/jpeg')
   fourth_sanya_place.save!
-
   #  Chengdu
-
   # 2. chengdu Airbnb
   second_chengdu_place_image_one = URI.open('https://z1.muscache.cn/im/pictures/miso/Hosting-52510967/original/1b681731-442c-4806-8737-b8fc1b230734.jpeg?im_w=1200')
   second_chengdu_place_image_two = URI.open('https://z1.muscache.cn/im/pictures/miso/Hosting-52510967/original/5d7cffcb-701e-42b5-beaf-df727e5a484d.jpeg?im_w=1200')
@@ -114,7 +100,6 @@ Shanghai Places
   second_chengdu_place.photos.attach(io: second_chengdu_place_image_two, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   second_chengdu_place.photos.attach(io: second_chengdu_place_image_three, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   second_chengdu_place.save!
-
   # 3. qunar chengdu
   third_chengdu_place_image_one = URI.open('https://himg1.qunarzz.com/imgs/202102/24/C.ek60vx50k8SFYHH1c480s.jpg')
   third_chengdu_place_image_two = URI.open('https://himg1.qunarzz.com/imgs/201911/05/C.N85cmSwyJEGek4MCo120.jpg')
@@ -124,7 +109,6 @@ Shanghai Places
   third_chengdu_place.photos.attach(io: third_chengdu_place_image_two, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   third_chengdu_place.photos.attach(io: third_chengdu_place_image_three, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   third_chengdu_place.save!
-
   # 4. hostelworld chengdu
   fourth_chengdu_place_image_one = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/1/12881/ouhixx8g7cxecukumroa')
   fourth_chengdu_place_image_two = URI.open('https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1900,h_823,c_limit,e_sharpen,e_improve,e_vibrance:60/v1/propertyimages/1/12881/eifa0q8i9einu9bcjamo')
@@ -134,17 +118,12 @@ Shanghai Places
   fourth_chengdu_place.photos.attach(io: fourth_chengdu_place_image_two, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   fourth_chengdu_place.photos.attach(io: fourth_chengdu_place_image_three, filename: 'chengdu.jpeg', content_type: 'image/jpeg')
   fourth_chengdu_place.save!
-
 puts "Done with hard coded places"
-
 # csv = Rails.root.join('db', 'places.csv')
 csv = "#{Rails.root}/db/places.csv"
-
-
 # Aggy: need to create a user to create places
 # User.destroy_all # This is commented out, because you already have a user in your database (local AND heroku)
 # user = User.create(email: 'blablabla3@test.com', password: '123456789', name: "Test Test") # Aggy: will just use this new user to create all the places below
-
 CSV.foreach(csv, headers: true, col_sep: "|") do |row|
      place = Place.new(
         link: row["link"],
@@ -159,13 +138,11 @@ CSV.foreach(csv, headers: true, col_sep: "|") do |row|
         thirdparty: row["thirdparty"],
         user_id: user.id # Aggy: user cannot be blank, validation!
     )
-
     images = []
     if row["images"].present?
       images = row["images"].gsub("[","").gsub("]","").split(",").map{|x| x.gsub('"','').strip}
       puts "check images array"
       p images
-
       # Aggy: to avoid running into errors, best to just loop through the images array
       images.each do |image|
         place.photos.attach(io: URI.open(image), filename: "#{SecureRandom.hex(4)}.jpg")
@@ -178,11 +155,9 @@ CSV.foreach(csv, headers: true, col_sep: "|") do |row|
       puts "error #{place.errors.full_messages}"
     end
 end
-
 # p Scrape
 # scrape = Scrape.new
 # p scrape.trip_scraper
-
 # puts "Cleaning database..."
 # Place.destroy_all
 # puts "Creating places..."
