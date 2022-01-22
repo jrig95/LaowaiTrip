@@ -2,10 +2,10 @@
 <div class="show-info">
   <h2><%= @place.place_name %>, <%= @place.place_name %></h2>
   <div class="place-info-headline">
-    <p><%= @place.description %></p>
+    <p><%= @place.description.truncate(275, seperator: '', omission: '...') %>.</p>
   </div>
   <div class="show-room-container">
-    <p><%= @place.max_guest %> guests • <%= @place.number_rooms %> bedrooms • <%= @place.   number_bathrooms %> bathrooms </p>
+    <p><%= @place.max_guest %>2 guests • <%= @place.number_rooms %>1 bedroom • <%= @place.   number_bathrooms %>1 bathroom </p>
   </div>
   <div class="btn btn-flat"> <i class="far fa-heart"></i> <%= link_to 'Wishlist', place_wishlists_path(@place),method: :post %></div>
 </div>
@@ -21,9 +21,13 @@
       <div class="info-container">
         <div class="hotel-info">
           <p><i class="fas fa-shower"></i> Amenities: <%= @place.amenities %></p>
-          <p><i class="fas fa-yen-sign"></i> Price per night: ¥ <%= @place.price_by_night %></p>
+          <% if @place.price_by_night == 0 %>
+            <p><i class="fas fa-yen-sign"></i> Sold Out </p>
+          <% else %>
+            <p><i class="fas fa-yen-sign"></i> Price per night: ¥ <%= ((@place.price_by_night)*(6.34).round) %></p>
+          <% end %>
           <p><i class="fas fa-map-marker-alt"></i> Address: <%= @place.address %></p>
-          <p> <i class="fas fa-hotel"></i> Special features: <%= @place.view %></p>
+          <p> <i class="fas fa-hotel"></i> Rating: <%= @place.rating %>/5</p>
         </div>
         <div class="stay-book-hotel">
         <%= link_to image_tag("#{@place.thirdparty}.jpg", height: '48', width: '48'), "#{@place.link}", target: :_blank, alt: "Le Wagon", class:"img-fluid rounded-start"%>
