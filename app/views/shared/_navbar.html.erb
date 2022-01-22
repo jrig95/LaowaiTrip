@@ -28,7 +28,7 @@
                       <% if current_user && current_user.photo.attached? %>
                         <%= cl_image_tag current_user.photo.key, height: 40, width: 40,  crop:  :thumb, gravity: :face, class:"rounded-circle" %>
                       <% else %>
-                      <%= image_tag "suitcase_new.jpg", width:40, height: 40, class:"rounded-circle", style:"object-fit: contain;"%>
+                        <%= image_tag "suitcase_new.jpg", width:40, height: 40, class:"rounded-circle", style:"object-fit: contain;"%>
                       <% end %>
                       <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> </a>
                       <div class="dropdown-menu" >
